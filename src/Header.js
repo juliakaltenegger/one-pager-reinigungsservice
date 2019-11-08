@@ -83,6 +83,7 @@ function Header() {
             </p>
           </div>
           <div className="unsere-waescherei">
+            <h2>Unsere Wäscherei</h2>
             <ul>
               <li>Bettwäsche</li>
               <li>Lieferung und Abholung</li>
@@ -93,6 +94,7 @@ function Header() {
             </ul>
           </div>
           <div className="airbnb-service">
+            <h2>Airbnb Service</h2>
             <ul>
               <li>Reinigung</li>
               <li>Schlüsselübergabe</li>
@@ -101,6 +103,7 @@ function Header() {
             </ul>
           </div>
           <div classname="bio-reinigung">
+            <h2>Bio Reinigung</h2>
             <p>
               Bei Interesse führen wir gerne Beratungsgespräche über die
               Möglichkeiten mit umweltfreundlichen Reinigungsmitteln zu

@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 //logos clients
 import logoCorporateMatters from "./assets/cm-logo.png";

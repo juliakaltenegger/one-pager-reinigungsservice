@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 //photos team large
 import adrianaPhoto from "./assets/adriana.png";

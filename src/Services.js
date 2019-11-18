@@ -1,4 +1,6 @@
 import React from "react";
+import styled from "styled-components";
+
 //icons services
 import iconBroom from "./assets/broom-icon.png";
 import iconWindow from "./assets/window-icon.png";

@@ -1,9 +1,11 @@
 import React from "react";
+import styled from "styled-components";
 
 // importing different sections
 import Services from "./Services.js";
 import Team from "./Team.js";
 import Clients from "./Clients.js";
+import StyledBanner from "./StyledBanner.js";
 
 import logo from "./assets/logo.png";
 import banner from "./assets/banner.jpg";
@@ -22,13 +24,37 @@ import laundryBanner from "./assets/laundry-banner.png";
 //icon jobs
 import weWantYou from "./assets/we-want-you.png";
 
+// css in js: styled components
+
+const NavBar = styled.div`
+  background-color: #fff;
+  display: flexbox;
+
+  & img {
+    width: 100px;
+  }
+
+  & ul {
+    /* remove bullet points */
+    list-style: none;
+  }
+
+  & li {
+    /* from vertical to horizontal */
+    display: block;
+    float: right;
+    /* space between list elements */
+    padding: 5px;
+  }
+`;
+
 export default Header;
 
 function Header() {
   return (
     <div className="App">
       <header className="header">
-        <div className="nav-bar" id="navBar">
+        <NavBar id="navBar">
           <a href="#navBar">
             <img
               className="nav-logo"
@@ -58,9 +84,9 @@ function Header() {
               <a href="#contact">Kontakt</a>
             </li>
           </ul>
-        </div>
-        <div className="banner">
-          <img
+        </NavBar>
+        <div classname="banner-header">
+          <StyledBanner
             src={banner}
             className="banner-image"
             alt="Oranger Schwamm auf blauer Oberfläche"
@@ -77,7 +103,7 @@ function Header() {
         <Team />
 
         <div classname="airbnb-section">
-          <img src={airbnbBanner} alt="Handy mit Airbnb App" />
+          <StyledBanner src={airbnbBanner} alt="Handy mit Airbnb App" />
           <img src={airbnbLogo} alt="Airbnb Logo" />
           <p>
             Wir haben jahrelange Erfahrung im airbnb-Service Bereich. Wir bieten
@@ -116,7 +142,11 @@ function Header() {
           </p>
         </div>
         <div classname="adrianas-wäscherei">
-          <img src={laundryBanner} alt="Saubere Wäsche" />
+          <StyledBanner
+            src={laundryBanner}
+            alt="Saubere Wäsche"
+            style={{padding: 100px;}}
+          />
           <h2>Adrianas Wäscherei</h2>
           <p>
             Ihre Textilien werden bei uns mit modernster Technik und höchster

@@ -1,11 +1,11 @@
 import React from "react";
 //icons services
-import iconBroom from "./broom-icon.png";
-import iconWindow from "./window-icon.png";
-import iconBroomSparkling from "./sparkling-broom-icon.png";
-import iconWashingMachine from "./washing-machine-icon.png";
-import iconBuildingHand from "./building-hand-icon.png";
-import iconBio from "./bio-icon.png";
+import iconBroom from "./assets/broom-icon.png";
+import iconWindow from "./assets/window-icon.png";
+import iconBroomSparkling from "./assets/sparkling-broom-icon.png";
+import iconWashingMachine from "./assets/washing-machine-icon.png";
+import iconBuildingHand from "./assets/building-hand-icon.png";
+import iconBio from "./assets/bio-icon.png";
 
 export default Services;
 

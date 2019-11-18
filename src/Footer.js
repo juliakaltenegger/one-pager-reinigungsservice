@@ -1,12 +1,13 @@
 import React from "react";
-import logoFooter from "./logo-footer.png";
+import logoFooter from "./assets/logo-footer.png";
+import meisterbetrieb from "./assets/meisterbetrieb.png";
 
 export default Footer;
 
 function Footer() {
   return (
     <footer id="contact">
-      <div>
+      <div classname="footer-purple">
         <img src={logoFooter} alt="Logo Adriana macht sauber" />
         <h2>Adriana Reinigungsservice E.U.</h2>
         <p>
@@ -23,6 +24,17 @@ function Footer() {
             waescherei@adriana-reinigungsservice.at
           </a>
         </p>
+      </div>
+      <div classname="footer-white">
+        <p>
+          © Adriana-Reinigungsservice e.U., 2019
+          Reinigungsservice/Wäscherei/airbnb Service 0699 108 43 780
+          <a href="mailto:sauber@adriana-reinigungsservice.at">
+            sauber@adriana-reinigungsservice.at
+          </a>
+          Datenschutzerklärung
+        </p>
+        <img src={meisterbetrieb} alt="Meisterbetrieb" />
       </div>
     </footer>
   );

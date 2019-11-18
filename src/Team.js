@@ -1,17 +1,24 @@
 import React from "react";
-import logo from "./logo.png";
 
-//photos team
-import adrianaPhoto from "./team-placeholder1.jpeg";
-import adrianaPhoto2 from "./team-placeholder2.jpeg";
-import dogPhoto from "./dog-placeholder.jpeg";
+//photos team large
+import adrianaPhoto from "./assets/adriana.png";
+import adrianaPhoto2 from "./assets/team2.png";
+import dogPhoto from "./assets/team-dog.png";
+
+//photos team small
+import dana1 from "./assets/dana1.png";
+import dana2 from "./assets/dana2.png";
+import dana3 from "./assets/dana3.png";
+import marianne1 from "./assets/marianne1.png";
+import marianne2 from "./assets/marianne2.png";
+import marianne3 from "./assets/marianne3.png";
 
 export default Team;
 
 function Team() {
   return (
     <>
-      <div classname="unser-team" id="team">
+      <div classname="team" id="team">
         <h2>Unser Team</h2>
         <div classname="team-photos">
           <img src={adrianaPhoto} alt="Geschäftsführerin Adriana" />
@@ -42,20 +49,21 @@ function Team() {
           </p>
         </div>
       </div>
+      <hr />
       <div classname="team-services-first-row">
-        <img src={logo} alt="" />
+        <img src={dana1} alt="" />
         <h3>Dana Reinigungsservice</h3>
-        <img src={logo} alt="" />
+        <img src={dana2} alt="" />
         <h3>Dana Reinigungsservice</h3>
-        <img src={logo} alt="" />
+        <img src={dana3} alt="" />
         <h3>Dana Wäscherei</h3>
       </div>
       <div classname="team-services-second-row">
-        <img src={logo} alt="" />
+        <img src={marianne1} alt="" />
         <h3>Marianne Reinigungsservice</h3>
-        <img src={logo} alt="" />
+        <img src={marianne2} alt="" />
         <h3>Marianne Reinigungsservice</h3>
-        <img src={logo} alt="" />
+        <img src={marianne3} alt="" />
         <h3>Marianne Reinigungsservice</h3>
       </div>
     </>

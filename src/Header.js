@@ -142,11 +142,7 @@ function Header() {
           </p>
         </div>
         <div classname="adrianas-wäscherei">
-          <StyledBanner
-            src={laundryBanner}
-            alt="Saubere Wäsche"
-            style={{padding: 100px;}}
-          />
+          <StyledBanner src={laundryBanner} alt="Saubere Wäsche" />
           <h2>Adrianas Wäscherei</h2>
           <p>
             Ihre Textilien werden bei uns mit modernster Technik und höchster

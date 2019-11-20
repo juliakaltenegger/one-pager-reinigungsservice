@@ -6,24 +6,30 @@ import * as serviceWorker from "./serviceWorker";
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0px;
+
 }
 H1 {
   font-family: sans-serif;
   text-transform: uppercase;
-  color: red;
+  color: purple;
   font-size: 18px;
-
+  margin: 0px;
+    padding: 0px;
 }
 
 H2 {
   font-family: sans-serif;
 
   text-transform: uppercase;
-  color: blue;
+  color: purple;
   font-size: 14px;
+  margin: 0px;
+    padding: 0px;
 
 }
 
@@ -31,10 +37,12 @@ H3 {
   font-family: sans-serif;
 
   text-transform: uppercase;
-  color: green;
+  color: purple;
   font-size: 10px;
 
-p {  font-family: sans-serif;
+p {  
+  font-family: sans-serif;
+  font-size: 20px;
 }
 
 }

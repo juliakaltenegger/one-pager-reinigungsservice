@@ -2,12 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 //icons services
-import iconBroom from "./assets/broom-icon.png";
-import iconWindow from "./assets/window-icon.png";
-import iconBroomSparkling from "./assets/sparkling-broom-icon.png";
-import iconWashingMachine from "./assets/washing-machine-icon.png";
-import iconBuildingHand from "./assets/building-hand-icon.png";
-import iconBio from "./assets/bio-icon.png";
+import { ReactComponent as BroomIcon } from "./assets/filter-01.svg";
+import { ReactComponent as WindowIcon } from "./assets/filter-02.svg";
+import { ReactComponent as SparklingBroomIcon } from "./assets/filter-03.svg";
+import { ReactComponent as WashingMachineIcon } from "./assets/filter-04.svg";
+import { ReactComponent as BuildingHandIcon } from "./assets/filter-05.svg";
+import { ReactComponent as BioIcon } from "./assets/filter-06.svg";
 
 export default Services;
 
@@ -17,8 +17,10 @@ function Services() {
       <div className="leistungen" id="service">
         <h2>Unsere Leistungen</h2>
         <div className="unterhaltsreinigung">
+          <BroomIcon type="img" alt="Icon Besen" />
+
           <h3>Unterhaltsreinigung</h3>
-          <img src={iconBroom} alt="Icon Besen" />
+
           <p>
             Periodische Reinigung der Oberflächen eines Objektes oder Raumes und
             seine Einrichtungen. Sie erhält den gewünschten oder geforderten
@@ -28,7 +30,7 @@ function Services() {
           </p>
         </div>
         <div className="sonderreinigung">
-          <img src={iconWindow} alt="Icon Fenster" />
+          <WindowIcon type="img" alt="Icon Fenster" />
           <h3>Sonderreinigung</h3>
           <p>
             Reinigungen, die über den Rahmen der Unterhalts- und
@@ -38,7 +40,7 @@ function Services() {
           </p>
         </div>
         <div className="sonderreinigung-zwei">
-          <img src={iconBroomSparkling} alt="Icon Besen" />
+          <SparklingBroomIcon type="img" alt="Icon Besen" />
           <h3>Sonderreinigung</h3>
           <p>
             Im Zuge der Grundreinigung werden haftende Verschmutzungen, aber
@@ -49,7 +51,7 @@ function Services() {
           </p>
         </div>
         <div className="unsere-waescherei">
-          <img src={iconWashingMachine} alt="Icon Waschmaschine" />
+          <WashingMachineIcon type="img" alt="Icon Waschmaschine" />
           <h3>Unsere Wäscherei</h3>
           <ul>
             <li>Bettwäsche</li>
@@ -61,7 +63,7 @@ function Services() {
           </ul>
         </div>
         <div className="airbnb-service">
-          <img src={iconBuildingHand} alt="Icon Hand unter Gebäude" />
+          <BuildingHandIcon type="img" alt="Icon Hand unter Gebäude" />
           <h3>Airbnb Service</h3>
           <ul>
             <li>Reinigung</li>
@@ -71,7 +73,7 @@ function Services() {
           </ul>
         </div>
         <div classname="bio-reinigung">
-          <img src={iconBio} alt="Icon Blatt" />
+          <BioIcon type="img" alt="Icon Blatt" />
           <h3>Bio Reinigung</h3>
           <p>
             Bei Interesse führen wir gerne Beratungsgespräche über die

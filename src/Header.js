@@ -7,6 +7,8 @@ import Team from "./Team.js";
 import Clients from "./Clients.js";
 import StyledBanner from "./StyledBanner.js";
 
+//importing assets for nav bar
+import { ReactComponent as CallCenterIcon } from "./assets/call-center.svg";
 import logo from "./assets/logo.png";
 import banner from "./assets/banner.jpg";
 import meisterbetriebWhite from "./assets/meisterbetrieb_white.png";
@@ -22,21 +24,51 @@ import laundryBanner from "./assets/laundry-banner.png";
 // laundryBanner = placeholder stockphoto istockphoto-665819900-2048x2048 Kopie.jpg
 
 //icon jobs
-import weWantYou from "./assets/we-want-you.png";
+import { ReactComponent as WeWantYouIcon } from "./assets/filter-07.svg";
 
 // css in js: styled components
 
+const StyledCallCenterIcon = styled(CallCenterIcon)`
+  fill: purple;
+  width: 200px;
+  height: auto;
+
+  display: block;
+`;
+
 const NavBar = styled.div`
   background-color: #fff;
-  display: flexbox;
+  position: fixed;
+  overflow: hidden;
+  width: 47%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 0px;
+`;
+
+const LogoNav = styled.img`
+  width: 100px;
+`;
+
+const NavBarContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px blue;
+  /* width: 30%; */
+  flex-grow: 2;
 
   & img {
-    width: 100px;
   }
 
   & ul {
     /* remove bullet points */
     list-style: none;
+    float: right;
+    right: 0;
+    margin: 0;
+    padding: 0;
   }
 
   & li {
@@ -45,6 +77,24 @@ const NavBar = styled.div`
     float: right;
     /* space between list elements */
     padding: 5px;
+
+    & a {
+      /* remove underlining of routing links # */
+      font-family: sans-serif;
+      font-size: 12px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    & h1 {
+      margin: 0;
+      padding: 0;
+    }
+
+    & h2 {
+      margin: 0;
+      padding: 0;
+    }
   }
 `;
 
@@ -55,35 +105,44 @@ function Header() {
     <div className="App">
       <header className="header">
         <NavBar id="navBar">
-          <a href="#navBar">
-            <img
-              className="nav-logo"
-              src={logo}
-              alt="Logo Adriana macht sauber"
-            />
-          </a>
-          <h1 className="headline">Adriana</h1>
-          <h2 className="description">
-            Reinigungsservice / Wäscherei / Airbnb Service
-          </h2>
-          <ul className="nav-bar-links">
-            <li>
-              <a href="#service">Service</a>
-            </li>
-            <li>
-              <a href="#team">Team</a>
-            </li>
-            <li>
-              <a href="#jobs">Jobs/Karriere</a>
-            </li>
-            <li>
-              <a href="#clients">Kunden</a>
-            </li>
-            <li>
-              {" "}
-              <a href="#contact">Kontakt</a>
-            </li>
-          </ul>
+          <NavBarContainer className="nav-contain-logo">
+            <a href="#navBar">
+              <LogoNav
+                className="nav-logo"
+                src={logo}
+                alt="Logo Adriana macht sauber"
+              />
+            </a>
+          </NavBarContainer>
+          <NavBarContainer className="nav-contain-h1-h2">
+            <h1 className="headline">Adriana</h1>
+            <h2 className="description">
+              Reinigungsservice / Wäscherei / Airbnb Service
+            </h2>
+          </NavBarContainer>
+
+          <NavBarContainer className="nav-contain-callcenter-ul">
+            <StyledCallCenterIcon type="img" alt="Call Center Agent" />
+
+            <ul className="nav-bar-links">
+              <li>
+                <a href="#service">Service</a>
+              </li>
+              <li>
+                <a href="#team">Team</a>
+              </li>
+              <li>
+                <a href="#jobs">Jobs/Karriere</a>
+              </li>
+              <li>
+                <a href="#clients">Kunden</a>
+              </li>
+              <li>
+                {" "}
+                <a href="#contact">Kontakt</a>
+              </li>
+            </ul>
+          </NavBarContainer>
         </NavBar>
         <div classname="banner-header">
           <StyledBanner
@@ -118,7 +177,7 @@ function Header() {
           </a>
         </div>
         <div classname="jobs" id="jobs">
-          <img src={weWantYou} alt="Zeigefinger zeigt auf dich" />
+          <WeWantYouIcon type="img" alt="Zeigefinger zeigt auf dich" />
           <h2>Interessiert an einem Job oder einer Lehre?</h2>
           <h3>Unter Reinigungs-Team braucht Verstärkung!</h3>
           <p>

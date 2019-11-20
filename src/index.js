@@ -3,10 +3,15 @@ import ReactDOM from "react-dom";
 
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import styled, { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+
+body {
+  margin: 0px;
+}
 H1 {
+  font-family: sans-serif;
   text-transform: uppercase;
   color: red;
   font-size: 18px;
@@ -14,6 +19,8 @@ H1 {
 }
 
 H2 {
+  font-family: sans-serif;
+
   text-transform: uppercase;
   color: blue;
   font-size: 14px;
@@ -21,9 +28,14 @@ H2 {
 }
 
 H3 {
+  font-family: sans-serif;
+
   text-transform: uppercase;
   color: green;
   font-size: 10px;
+
+p {  font-family: sans-serif;
+}
 
 }
 

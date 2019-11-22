@@ -31,6 +31,14 @@ import { ReactComponent as WeWantYouIcon } from "./assets/filter-07.svg";
 
 //__________NAVBAR__________
 
+const MaxWidthNav = styled.div`
+  padding-left: 16px;
+  padding-right: 16px;
+
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1180px;
+`;
 const NavBar = styled.div`
   background-color: #fff;
   height: 130px;
@@ -53,7 +61,7 @@ const NavBarFlexbox = styled.div`
 `;
 
 const Logo = styled.img`
-  width: 160px;
+  width: 150px;
   border: 2px white;
   /* - top / right / bottom / left */
   margin: 10px 0px 0px 0px;
@@ -63,21 +71,16 @@ const Logo = styled.img`
 const NavContainerCenter = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width: 310px;
-  margin: 65px 0px 0px 50px;
-
-  & h1 {
-    margin: 0px;
-    padding: 0px;
-    font-size: 18px;
-    font-weight: 400;
-  }
+  width: 360px;
+  padding: 0px;
+  margin-top: 45px;
+  margin-right: auto;
+  margin-left: 170px;
 
   & h2 {
-    margin: 0px;
-    padding: 0px;
-    font-size: 12px;
-    font-weight: lighter;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: left;
   }
 `;
 
@@ -91,7 +94,7 @@ const NavContainerLinks = styled.div`
   & ul {
     /* - remove bullet points */
     list-style: none;
-    margin: 0;
+    margin: -10px;
     padding: 0;
   }
 
@@ -135,8 +138,8 @@ const MeisterWhite = styled.img`
   z-index: 100;
   position: absolute;
   top: 200px;
-  left: 230px;
-  width: 450px;
+  left: 130px;
+  width: 380px;
   opacity: 0.3;
 `;
 
@@ -156,7 +159,7 @@ const PurpleTextBox = styled.div`
   z-index: 100;
   position: absolute;
   top: 420px;
-  left: 310px;
+  left: 210px;
 
   & a {
     color: #fff;
@@ -170,7 +173,7 @@ function Header() {
     <div className="App">
       <header className="header">
         <NavBar id="navBar">
-          <MaxWidth>
+          <MaxWidthNav>
             <NavBarFlexbox>
               <div className="nav-contain-logo">
                 <a href="#navBar">
@@ -211,7 +214,7 @@ function Header() {
                 </ul>
               </NavContainerLinks>
             </NavBarFlexbox>
-          </MaxWidth>
+          </MaxWidthNav>
         </NavBar>
         <BannerHeader className="banner-header">
           <StyledBanner

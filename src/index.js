@@ -17,17 +17,21 @@ H1 {
   font-family: sans-serif;
   text-transform: uppercase;
   color: purple;
-  font-size: 18px;
+  font-size: 24px;
+  font-weight: 400;
+
   margin: 0px;
-    padding: 0px;
+  padding: 0px;
+    
 }
 
 H2 {
   font-family: sans-serif;
 
   text-transform: uppercase;
+  text-align: center;
   color: purple;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 400;
   margin: 0px;
   padding: 0px;

@@ -1,6 +1,7 @@
 import React from "react";
-// import styled from "styled-components";
+import styled from "styled-components";
 import MaxWidth from "./MaxWidth.js";
+import StyledIcons from "./StyledIcons";
 
 //icons services
 import { ReactComponent as BroomIcon } from "./assets/filter-01.svg";
@@ -10,13 +11,21 @@ import { ReactComponent as WashingMachineIcon } from "./assets/filter-04.svg";
 import { ReactComponent as BuildingHandIcon } from "./assets/filter-05.svg";
 import { ReactComponent as BioIcon } from "./assets/filter-06.svg";
 
+const ServicesSection = styled.div`
+  padding-top: 60px;
+
+  & h2 {
+    text-align: center;
+  }
+`;
+
 export default Services;
 
 function Services() {
   return (
     <>
       <MaxWidth className="maxwidth-services">
-        <div className="leistungen" id="service">
+        <ServicesSection className="leistungen" id="service">
           <h2>Unsere Leistungen</h2>
           <div className="unterhaltsreinigung">
             <BroomIcon type="img" alt="Icon Besen" />
@@ -84,7 +93,7 @@ function Services() {
               Mitteln im Bereichen der Ordinationsreinigung
             </p>
           </div>
-        </div>
+        </ServicesSection>
       </MaxWidth>
     </>
   );

@@ -27,9 +27,10 @@ H2 {
 
   text-transform: uppercase;
   color: purple;
-  font-size: 14px;
+  font-size: 18px;
+  font-weight: 400;
   margin: 0px;
-    padding: 0px;
+  padding: 0px;
 
 }
 
@@ -38,14 +39,15 @@ H3 {
 
   text-transform: uppercase;
   color: purple;
-  font-size: 10px;
-
+  font-weight: 400;
+  font-size: 14px;
+}
 p {  
   font-family: sans-serif;
-  font-size: 20px;
+  font-size: 12px;
 }
 
-}
+
 
 
 `;

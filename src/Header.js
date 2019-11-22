@@ -40,18 +40,20 @@ const StyledCallCenterIcon = styled(CallCenterIcon)`
 `;
 
 const NavBar = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: flex-start;
-
   background-color: #fff;
   position: fixed;
   overflow: hidden;
   width: 100%;
   margin-top: 0px;
   height: 130px;
+`;
+
+const NavBarFlexbox = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
 `;
 
 const Logo = styled.img`
@@ -71,7 +73,8 @@ const NavContainerCenter = styled.div`
   & h1 {
     margin: 0px;
     padding: 0px;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 400;
   }
 
   & h2 {
@@ -123,44 +126,48 @@ function Header() {
     <div className="App">
       <header className="header">
         <NavBar id="navBar">
-          <div className="nav-contain-logo">
-            <a href="#navBar">
-              <Logo
-                className="nav-logo"
-                src={logo}
-                alt="Logo Adriana macht sauber"
-              />
-            </a>
-          </div>
-          <NavContainerCenter className="nav-contain-h1-h2">
-            <h1 className="headline">Adriana</h1>
-            <h2 className="description">
-              Reinigungsservice / Wäscherei / Airbnb Service
-            </h2>
-          </NavContainerCenter>
+          <MaxWidth>
+            <NavBarFlexbox>
+              <div className="nav-contain-logo">
+                <a href="#navBar">
+                  <Logo
+                    className="nav-logo"
+                    src={logo}
+                    alt="Logo Adriana macht sauber"
+                  />
+                </a>
+              </div>
+              <NavContainerCenter className="nav-contain-h1-h2">
+                <h1 className="headline">Adriana</h1>
+                <h2 className="description">
+                  Reinigungsservice / Wäscherei / Airbnb Service
+                </h2>
+              </NavContainerCenter>
 
-          <NavContainerLinks className="nav-contain-callcenter-ul">
-            <StyledCallCenterIcon type="img" alt="Call Center Agent" />
+              <NavContainerLinks className="nav-contain-callcenter-ul">
+                <StyledCallCenterIcon type="img" alt="Call Center Agent" />
 
-            <ul className="nav-bar-links">
-              <li>
-                <a href="#service">Service</a>
-              </li>
-              <li>
-                <a href="#team">Team</a>
-              </li>
-              <li>
-                <a href="#jobs">Jobs/Karriere</a>
-              </li>
-              <li>
-                <a href="#clients">Kunden</a>
-              </li>
-              <li>
-                {" "}
-                <a href="#contact">Kontakt</a>
-              </li>
-            </ul>
-          </NavContainerLinks>
+                <ul className="nav-bar-links">
+                  <li>
+                    <a href="#service">Service</a>
+                  </li>
+                  <li>
+                    <a href="#team">Team</a>
+                  </li>
+                  <li>
+                    <a href="#jobs">Jobs/Karriere</a>
+                  </li>
+                  <li>
+                    <a href="#clients">Kunden</a>
+                  </li>
+                  <li>
+                    {" "}
+                    <a href="#contact">Kontakt</a>
+                  </li>
+                </ul>
+              </NavContainerLinks>
+            </NavBarFlexbox>
+          </MaxWidth>
         </NavBar>
         <div className="banner-header">
           <StyledBanner

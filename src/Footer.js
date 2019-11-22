@@ -1,12 +1,11 @@
 import React from "react";
-import styled from "styled-components";
+// import styled from "styled-components";
 
 import MaxWidth from "./MaxWidth.js";
 
 // assets footer
 import logoFooter from "./assets/logo-footer.png";
 import meisterbetrieb from "./assets/meisterbetrieb.png";
-import { maxHeaderSize } from "http";
 
 export default Footer;
 

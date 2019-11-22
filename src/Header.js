@@ -29,38 +29,34 @@ import { ReactComponent as WeWantYouIcon } from "./assets/filter-07.svg";
 
 // css in js: styled components
 
-const StyledCallCenterIcon = styled(CallCenterIcon)`
-  /* NEEDS TO BE UPDATED (HEX!!!) */
-  fill: lightblue;
-  /* resizing */
-  width: 200px;
-  height: auto;
-  display: block;
-  margin-bottom: 20px;
-`;
+//__________NAVBAR__________
 
 const NavBar = styled.div`
   background-color: #fff;
-  position: fixed;
-  overflow: hidden;
-  width: 100%;
-  margin-top: 0px;
   height: 130px;
+  width: 100%;
+  /* - so that navbar always stays on top as you scroll down */
+  position: fixed;
+  z-index: 400;
+
+  /* overflow: hidden; */
 `;
 
 const NavBarFlexbox = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  /* - distributes content evenly while pushing the right and left one to the very right and very left */
   justify-content: space-between;
+  /* - aligns items vertically on top  */
   align-items: flex-start;
 `;
 
 const Logo = styled.img`
   width: 160px;
   border: 2px white;
+  /* - top / right / bottom / left */
   margin: 10px 0px 0px 0px;
-  overflow: hidden;
   position: fixed;
 `;
 
@@ -89,33 +85,81 @@ const NavContainerLinks = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 350px;
+  /* - items are packed toward to end line (to the very right) */
   justify-content: flex-end;
 
   & ul {
-    /* remove bullet points */
+    /* - remove bullet points */
     list-style: none;
-    float: right;
-    right: 0;
     margin: 0;
     padding: 0;
   }
 
   & li {
-    /* from vertical to horizontal */
+    /* - from vertical to horizontal */
     display: inline;
-    /* space between list elements */
+    /* - space between list elements */
     padding: 5px;
   }
 
+  /* links in nav bar (service team jobs/karriere kunden kontakt) */
   & a {
-    /* remove underlining of routing links # */
     font-family: sans-serif;
     font-size: 12px;
     font-weight: lighter;
+    color: #000;
 
+    /* - remove underlining of routing links # */
     text-decoration: none;
     text-transform: uppercase;
-    color: #000;
+  }
+`;
+
+const StyledCallCenterIcon = styled(CallCenterIcon)`
+  /* NEEDS TO BE UPDATED (HEX!!!) */
+  fill: lightblue;
+  /* resizing */
+  width: 200px;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+`;
+
+//__________SPONGE BANNER__________
+
+const BannerHeader = styled.div`
+  position: relative;
+`;
+
+const MeisterWhite = styled.img`
+  z-index: 100;
+  position: absolute;
+  top: 200px;
+  left: 230px;
+  width: 450px;
+  opacity: 0.3;
+`;
+
+const PurpleTextBox = styled.div`
+  background-color: purple;
+  opacity: 0.7;
+  width: 490px;
+
+  font-family: sans-serif;
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+
+  padding: 40px;
+
+  z-index: 100;
+  position: absolute;
+  top: 420px;
+  left: 310px;
+
+  & a {
+    color: #fff;
   }
 `;
 
@@ -169,22 +213,23 @@ function Header() {
             </NavBarFlexbox>
           </MaxWidth>
         </NavBar>
-        <div className="banner-header">
+        <BannerHeader className="banner-header">
           <StyledBanner
             src={banner}
             className="banner-image"
             alt="Oranger Schwamm auf blauer Oberfläche"
           />
-          <img src={meisterbetriebWhite} alt="Meisterbetrieb" />
+          <MeisterWhite src={meisterbetriebWhite} alt="Meisterbetrieb" />
           <MaxWidth className="banner-max-width">
-            <h3>
-              Meisterbetrieb Adriana macht sauber! Gründlich, schnell und
-              professionell. In Büros, Wohnungen, Ordinationen... überall wo es
-              Bedarf für eine gründliche Reinigung gibt. Wir freuen uns auf Ihre
-              Anfrage.
-            </h3>
+            <PurpleTextBox>
+              Meisterbetrieb Adriana macht sauber! <br />{" "}
+              <strong>Gründlich, schnell und professionell.</strong> <br /> In
+              Büros, Wohnungen, Ordinationen... überall wo es Bedarf für eine
+              gründliche Reinigung gibt. Wir freuen uns auf Ihre{" "}
+              <a href="mailto:sauber@adriana-reinigungsservice.at">Anfrage</a>.
+            </PurpleTextBox>
           </MaxWidth>
-        </div>
+        </BannerHeader>
         <Services />
         <Team />
 

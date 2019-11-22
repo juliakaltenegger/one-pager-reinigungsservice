@@ -36,12 +36,12 @@ H2 {
 
 H3 {
   font-family: sans-serif;
-
   text-transform: uppercase;
   color: purple;
   font-weight: 400;
   font-size: 14px;
 }
+
 p {  
   font-family: sans-serif;
   font-size: 12px;

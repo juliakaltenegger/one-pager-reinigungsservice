@@ -43,20 +43,29 @@ const TeamTopGridItem = styled.div`
 const TeamBottomGridContainer = styled.div`
   display: grid;
   grid-template-columns: auto auto auto;
-  padding: 10px;
+  margin: 50px 0px 0px 80px;
 `;
 
-// const TeamBottomGridItem = styled.div`
-//   font-size: 30px;
-//   text-align: center;
-//   padding: 0px 20px 0px 20px;
-//   line-height: 20px;
+const TeamBottomGridItem = styled.div`
+  font-size: 30px;
+  padding-right: 125px;
+  padding-bottom: 40px;
+  line-height: 20px;
+  display: grid;
+  grid-template-columns: 100px auto;
+  text-align: left;
 
-//   & img {
-//     width: 80px;
-//     height: auto;
-//   }
-// `;
+  & img {
+    width: 90px;
+    height: auto;
+    padding-right: 10px;
+  }
+
+  & h3 {
+    margin: 25px 0px 25px 0px;
+    text-transform: none;
+  }
+`;
 
 function Team() {
   return (
@@ -106,22 +115,49 @@ function Team() {
           </div>
           <hr />
           <TeamBottomGridContainer>
-            <div className="team-services-first-row">
+            <TeamBottomGridItem>
               <img src={dana1} alt="" />
-              <h3>Dana Reinigungsservice</h3>
+              <h3>
+                DANA <br /> Reinigungsservice
+              </h3>{" "}
+            </TeamBottomGridItem>
+
+            <TeamBottomGridItem>
               <img src={dana2} alt="" />
-              <h3>Dana Reinigungsservice</h3>
+              <h3>
+                DANA <br /> Reinigungsservice
+              </h3>{" "}
+            </TeamBottomGridItem>
+
+            <TeamBottomGridItem>
               <img src={dana3} alt="" />
-              <h3>Dana Wäscherei</h3>
-            </div>
-            <div className="team-services-second-row">
+              <h3>
+                DANA
+                <br />
+                Wäscherei
+              </h3>
+            </TeamBottomGridItem>
+            <TeamBottomGridItem>
               <img src={marianne1} alt="" />
-              <h3>Marianne Reinigungsservice</h3>
+              <h3>
+                MARIANNE
+                <br /> Reinigungsservice
+              </h3>
+            </TeamBottomGridItem>
+
+            <TeamBottomGridItem>
               <img src={marianne2} alt="" />
-              <h3>Marianne Reinigungsservice</h3>
+              <h3>
+                MARIANNE <br /> Reinigungsservice
+              </h3>
+            </TeamBottomGridItem>
+
+            <TeamBottomGridItem>
               <img src={marianne3} alt="" />
-              <h3>Marianne Reinigungsservice</h3>
-            </div>
+              <h3>
+                MARIANNE <br /> Reinigungsservice
+              </h3>
+            </TeamBottomGridItem>
           </TeamBottomGridContainer>
         </TeamSection>
       </MaxWidth>

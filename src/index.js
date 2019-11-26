@@ -49,8 +49,12 @@ H3 {
 p {  
   font-family: sans-serif;
   font-size: 12px;
+  color: #505050	;
 }
-
+li {  
+  font-family: sans-serif;
+  font-size: 12px;
+}
 
 
 

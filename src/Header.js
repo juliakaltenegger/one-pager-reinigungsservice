@@ -50,7 +50,7 @@ const NavBar = styled.div`
   /* overflow: hidden; */
 `;
 
-const NavBarFlexbox = styled.div`
+const NavBarFlexbox = styled.section`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -130,7 +130,7 @@ const StyledCallCenterIcon = styled(CallCenterIcon)`
 
 //__________SPONGE BANNER__________
 
-const BannerHeader = styled.div`
+const BannerHeader = styled.section`
   position: relative;
 `;
 

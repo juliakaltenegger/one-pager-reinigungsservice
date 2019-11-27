@@ -44,13 +44,13 @@ const TeamTopGridItem = styled.div`
 const TeamBottomGridContainer = styled.div`
   display: grid;
   grid-template-columns: auto auto auto;
-  margin: 50px 0px 0px 80px;
+  margin: 50px 0px 0px 110px;
 `;
 
 const TeamBottomGridItem = styled.div`
   font-size: 30px;
-  padding-right: 125px;
   padding-bottom: 40px;
+  padding-right: 20px;
   line-height: 20px;
   display: grid;
   grid-template-columns: 100px auto;

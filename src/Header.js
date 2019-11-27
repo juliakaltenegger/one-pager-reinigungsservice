@@ -268,6 +268,7 @@ const JobSectionGridItem = styled.div`
 //__________LAUNDRY SECTION__________
 const LaundryContainer = styled.section`
   position: relative;
+  margin-bottom: 60px;
 `;
 
 const LaundryBlueTextBox = styled.div`

@@ -19,7 +19,7 @@ import marianne3 from "./assets/marianne3.png";
 export default Team;
 
 const TeamSection = styled.section`
-  padding: 60px 0px 60px 0px;
+  padding: 60px 0px 20px 0px;
 `;
 
 const TeamTopGridContainer = styled.div`
@@ -35,8 +35,9 @@ const TeamTopGridItem = styled.div`
   line-height: 20px;
 
   & img {
-    width: 300px;
+    width: 250px;
     height: auto;
+    padding-bottom: 20px;
   }
 `;
 

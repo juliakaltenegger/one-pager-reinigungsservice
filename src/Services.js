@@ -14,7 +14,7 @@ import { ReactComponent as BioIcon } from "./assets/filter-06.svg";
 
 const ServicesSection = styled.section`
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 20px;
 `;
 
 const ServicesGridContainer = styled.div`

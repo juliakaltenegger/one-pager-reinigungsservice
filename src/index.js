@@ -14,7 +14,8 @@ body {
 
 }
 H1 {
-  font-family: sans-serif;
+  font-family:  'Raleway', sans-serif;;
+;
   text-transform: uppercase;
   color: purple;
   font-size: 24px;
@@ -26,7 +27,8 @@ H1 {
 }
 
 H2 {
-  font-family: sans-serif;
+  font-family:  'Raleway', sans-serif;
+;
 
   text-transform: uppercase;
   text-align: center;
@@ -39,7 +41,8 @@ H2 {
 }
 
 H3 {
-  font-family: sans-serif;
+  font-family: 'Raleway', sans-serif;;
+;
   text-transform: uppercase;
   color: purple;
   font-weight: 400;
@@ -47,12 +50,14 @@ H3 {
 }
 
 p {  
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
+;
   font-size: 12px;
   color: #505050	;
 }
 li {  
-  font-family: sans-serif;
+  font-family:  'Roboto', sans-serif;
+;
   font-size: 12px;
 }
 

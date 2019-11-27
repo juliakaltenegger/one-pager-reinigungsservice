@@ -168,9 +168,12 @@ const PurpleTextBox = styled.div`
 `;
 
 //__________AIRBNB BANNER__________
+const AirbnbContainer = styled.section`
+  position: relative;
+`;
 const AirbnbPurpleTextBox = styled.div`
   width: 100%;
-  height: 530px;
+  height: 99%;
   background-image: linear-gradient(
     to right,
     rgba(155, 0, 174, 0),
@@ -178,8 +181,6 @@ const AirbnbPurpleTextBox = styled.div`
     rgba(155, 0, 174, 1)
   );
 
-  font-family: sans-serif;
-  color: #fff;
   font-weight: 400;
   font-size: 14px;
   line-height: 30px;
@@ -188,26 +189,31 @@ const AirbnbPurpleTextBox = styled.div`
 
   z-index: 100;
   position: absolute;
-  top: 2805px;
+  top: 0px;
 
   & img {
     margin-left: 50%;
     width: 200px;
+    padding-top: 20px;
   }
 
   & p {
-    color: #fff;
+    color: #ddd2df;
+    font-family: "Raleway", sans-serif;
+
     font-size: 18px;
     margin-left: 50%;
-    margin-right: 200px;
+    margin-right: 150px;
+    padding-top: 20px;
   }
 
   & h3 {
-    color: #fff;
+    color: #ddd2df;
     font-size: 24px;
     margin-left: 50%;
     margin-bottom: 50px;
-    margin-right: 200px;
+    margin-right: 150px;
+    padding-top: 20px;
   }
 
   & a,
@@ -216,9 +222,11 @@ const AirbnbPurpleTextBox = styled.div`
     text-decoration: none;
     text-transform: uppercase;
     color: #fff;
+    font-family: "Raleway", sans-serif;
     font-size: 14px;
     align-items: right;
     margin-left: 50%;
+    padding-top: 20px;
 
     /* - to make it look like a button */
     background-color: #cc52d4;
@@ -227,21 +235,97 @@ const AirbnbPurpleTextBox = styled.div`
 `;
 
 //__________JOB SECTION__________
-
-const JobSection = styled.section`
+const JobSection = styled.div`
   padding-top: 60px;
+`;
+
+const StyledWeWantYouIcon = styled(WeWantYouIcon)`
+  padding-top: 60px;
+  fill: purple;
+  width: 60px;
+  height: auto;
+  text-align: center;
+`;
+
+const JobSectionGridContainer = styled.section`
   padding-bottom: 60px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin: 40px 50px 0px 50px;
 
   & h2 {
     margin-bottom: 30px;
   }
 `;
 
-const StyledWeWantYouIcon = styled(WeWantYouIcon)`
-  fill: purple;
-  width: 60px;
-  height: auto;
+const JobSectionGridItem = styled.div`
+  font-size: 30px;
   text-align: center;
+  padding: 0px 20px 0px 20px;
+  line-height: 20px;
+`;
+
+//__________LAUNDRY SECTION__________
+const LaundryContainer = styled.section`
+  position: relative;
+`;
+
+const LaundryBlueTextBox = styled.div`
+  width: 100%;
+  height: 99.5%;
+  background-image: linear-gradient(
+    to right,
+    rgba(109, 198, 210, 0),
+    rgba(109, 198, 210, 0.96),
+    rgba(109, 198, 210, 1),
+    rgba(109, 198, 210, 1)
+  );
+  position: absolute;
+  top: 0;
+
+  & h2 {
+    color: #fff;
+    font-size: 18px;
+    margin-left: 50%;
+    padding-top: 110px;
+    margin-bottom: 0px;
+    text-align: left;
+  }
+
+  & p {
+    color: #000;
+    font-family: "Raleway", sans-serif;
+    line-height: 30px;
+    margin-left: 50%;
+    margin-right: 40px;
+    margin-top: 10px;
+  }
+
+  & h3 {
+    color: #fff;
+    font-size: 18px;
+    margin-left: 50%;
+    padding-bottom: 70px;
+    margin-right: 40px;
+    padding-top: 20px;
+  }
+
+  & a,
+  a:link,
+  a:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    align-items: right;
+    margin-left: 50%;
+    padding-top: 20px;
+
+    /* - to make it look like a button */
+    background-color: #5aa6b0;
+    padding: 20px 46px 20px 46px;
+  }
 `;
 
 export default Header;
@@ -315,76 +399,91 @@ function Header() {
         <Team />
 
         <section className="airbnb-section">
-          <StyledBanner src={airbnbBanner} alt="Handy mit Airbnb App" />
-          <AirbnbPurpleTextBox>
-            <img src={airbnbLogo} alt="Airbnb Logo" />
-            <p>
-              Wir haben jahrelange Erfahrung im airbnb-Service Bereich. Wir
-              bieten ein Rundumservice an, welches beinhaltet
-            </p>
-            <h3>
-              Schlüsselübergabe - Reinigung - Kontrolle - Übergabe der Locations
-              - Begrüssung - Informations...
-            </h3>
-            <a href="mailto:sauber@adriana-reinigungsservice.at">
-              E-Mail Anfrage
-            </a>
-          </AirbnbPurpleTextBox>
+          <AirbnbContainer>
+            <StyledBanner src={airbnbBanner} alt="Handy mit Airbnb App" />
+            <AirbnbPurpleTextBox>
+              <img src={airbnbLogo} alt="Airbnb Logo" />
+              <p>
+                Wir haben jahrelange Erfahrung im airbnb-Service Bereich. Wir
+                bieten ein Rundumservice an, welches beinhaltet
+              </p>
+              <h3>
+                Schlüsselübergabe - Reinigung - Kontrolle - Übergabe der
+                Locations - Begrüssung - Informations...
+              </h3>
+              <a href="mailto:sauber@adriana-reinigungsservice.at">
+                E-Mail Anfrage
+              </a>
+            </AirbnbPurpleTextBox>
+          </AirbnbContainer>
         </section>
 
         <BackgroundLightPurple>
           <MaxWidth>
             <JobSection className="jobs" id="jobs">
               <h2>Interessiert an einem Job oder einer Lehre?</h2>
+
               <div style={{ textAlign: "center" }}>
                 <StyledWeWantYouIcon
                   type="img"
                   alt="Zeigefinger zeigt auf dich"
                 />
               </div>
-
-              <h3>Unter Reinigungs-Team braucht Verstärkung!</h3>
-              <p>
-                Haben Sie sich schon Gedanken gemacht, wie Sie die nächsten
-                Bausteine Ihrer Karriere legen wollen? In welchem Arbeitsumfeld
-                Sie wachsen wollen und wo Ihre Fähigkeiten am besten gefördert
-                werden? Wir freuen uns auf Ihre Bewerbung...
-              </p>
-              <h3>Bewirb dich für eine Lehre bei uns!</h3>
-              <p>
-                Haben Sie sich schon Gedanken gemacht, wie Sie die nächsten
-                Bausteine Ihrer Karriere legen wollen? In welchem Arbeitsumfeld
-                Sie wachsen wollen und wo Ihre Fähigkeiten am besten gefördert
-                werden?
-              </p>
-              <h3>Wir brauchen Hilfe in der Wäscherei!</h3>
-              <p>
-                In welchem Arbeitsumfeld Sie wachsen wollen und wo Ihre
-                Fähigkeiten am besten gefördert werden? Unsere Mission
-                Statements stellen Bausteine unseres Erfolgs dar. Seien Sie ein
-                weiterer Baustein. Wir freuen uns auf Ihre Bewerbung als PERFECT
-                FIT.
-              </p>
+              <JobSectionGridContainer>
+                <JobSectionGridItem>
+                  <h3>Unter Reinigungs-Team braucht Verstärkung!</h3>
+                  <p>
+                    Haben Sie sich schon Gedanken gemacht, wie Sie die nächsten
+                    Bausteine Ihrer Karriere legen wollen? In welchem
+                    Arbeitsumfeld Sie wachsen wollen und wo Ihre Fähigkeiten am
+                    besten gefördert werden? Wir freuen uns auf Ihre
+                    Bewerbung...
+                  </p>
+                </JobSectionGridItem>
+                <JobSectionGridItem>
+                  <h3>Bewirb dich für eine Lehre bei uns!</h3>
+                  <p>
+                    Haben Sie sich schon Gedanken gemacht, wie Sie die nächsten
+                    Bausteine Ihrer Karriere legen wollen? In welchem
+                    Arbeitsumfeld Sie wachsen wollen und wo Ihre Fähigkeiten am
+                    besten gefördert werden?
+                  </p>
+                </JobSectionGridItem>
+                <JobSectionGridItem>
+                  <h3>Wir brauchen Hilfe in der Wäscherei!</h3>
+                  <p>
+                    In welchem Arbeitsumfeld Sie wachsen wollen und wo Ihre
+                    Fähigkeiten am besten gefördert werden? Unsere Mission
+                    Statements stellen Bausteine unseres Erfolgs dar. Seien Sie
+                    ein weiterer Baustein. Wir freuen uns auf Ihre Bewerbung als
+                    PERFECT FIT.
+                  </p>
+                </JobSectionGridItem>
+              </JobSectionGridContainer>
             </JobSection>
           </MaxWidth>
         </BackgroundLightPurple>
 
         <div className="adrianas-wäscherei">
-          <StyledBanner src={laundryBanner} alt="Saubere Wäsche" />
-          <MaxWidth>
-            <h2>Adrianas Wäscherei</h2>
-            <p>
-              Ihre Textilien werden bei uns mit modernster Technik und höchster
-              Sorgfalt gereinigt. Durch unsere umfassenden Qualitätssicherung
-              gewährleisten wir einen raschen Service mit höchster
-              Kundenzufriedenheit. Überzeugen Sie sich noch heute davon, wie
-              sauber Ihre Wäsche wird!
-            </p>
-            <h3>Abholen - Reinigen - Trocknen - Bügeln - Liefern</h3>
-            <a href="mailto:waescherei@adriana-reinigungsservice.at">
-              E-Mail Anfrage
-            </a>
-          </MaxWidth>
+          <LaundryContainer>
+            <StyledBanner src={laundryBanner} alt="Saubere Wäsche" />
+            <LaundryBlueTextBox>
+              <MaxWidth>
+                <h2>Adrianas Wäscherei</h2>
+                <p>
+                  Ihre Textilien werden bei uns mit modernster Technik und
+                  höchster Sorgfalt gereinigt. Durch unsere umfassenden
+                  Qualitätssicherung gewährleisten wir einen raschen Service mit
+                  höchster Kundenzufriedenheit. Überzeugen Sie sich noch heute
+                  davon, wie sauber Ihre Wäsche wird!
+                </p>
+                <h3>Abholen - Reinigen - Trocknen - Bügeln - Liefern</h3>
+                <a href="mailto:waescherei@adriana-reinigungsservice.at">
+                  E-Mail Anfrage
+                </a>
+              </MaxWidth>{" "}
+            </LaundryBlueTextBox>
+          </LaundryContainer>
         </div>
         <Clients />
       </header>

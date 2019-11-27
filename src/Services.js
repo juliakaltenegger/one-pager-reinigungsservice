@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import MaxWidth from "./MaxWidth.js";
 import StyledIcons from "./StyledIcons";
+import BackgroundLightPurple from "./BackgroundLightPurple.js";
 
 //icons services
 import { ReactComponent as BroomIcon } from "./assets/filter-01.svg";
@@ -10,10 +11,6 @@ import { ReactComponent as SparklingBroomIcon } from "./assets/filter-03.svg";
 import { ReactComponent as WashingMachineIcon } from "./assets/filter-04.svg";
 import { ReactComponent as BuildingHandIcon } from "./assets/filter-05.svg";
 import { ReactComponent as BioIcon } from "./assets/filter-06.svg";
-
-const BackgroundServices = styled.section`
-  background-color: #f7f2fd;
-`;
 
 const ServicesSection = styled.section`
   padding-top: 60px;
@@ -86,7 +83,7 @@ export default Services;
 function Services() {
   return (
     <>
-      <BackgroundServices>
+      <BackgroundLightPurple>
         <MaxWidth className="maxwidth-services">
           <ServicesSection className="leistungen" id="service">
             <h2>Unsere Leistungen</h2>
@@ -208,7 +205,7 @@ function Services() {
             </ServicesGridContainer>
           </ServicesSection>
         </MaxWidth>
-      </BackgroundServices>
+      </BackgroundLightPurple>
     </>
   );
 }

@@ -5,6 +5,7 @@ const StyledBanner = styled.img`
   width: 100%;
   top: 0;
   left: 0;
+  position: relative;
 `;
 
 export default StyledBanner;

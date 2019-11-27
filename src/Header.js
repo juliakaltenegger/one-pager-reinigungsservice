@@ -7,6 +7,7 @@ import Team from "./Team.js";
 import Clients from "./Clients.js";
 import StyledBanner from "./StyledBanner.js";
 import MaxWidth from "./MaxWidth.js";
+import BackgroundLightPurple from "./BackgroundLightPurple.js";
 
 //importing assets for nav bar
 import { ReactComponent as CallCenterIcon } from "./assets/call-center.svg";
@@ -166,6 +167,83 @@ const PurpleTextBox = styled.div`
   }
 `;
 
+//__________AIRBNB BANNER__________
+const AirbnbPurpleTextBox = styled.div`
+  width: 100%;
+  height: 530px;
+  background-image: linear-gradient(
+    to right,
+    rgba(155, 0, 174, 0),
+    rgba(155, 0, 174, 0.8),
+    rgba(155, 0, 174, 1)
+  );
+
+  font-family: sans-serif;
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+
+  padding: 40px;
+
+  z-index: 100;
+  position: absolute;
+  top: 2805px;
+
+  & img {
+    margin-left: 50%;
+    width: 200px;
+  }
+
+  & p {
+    color: #fff;
+    font-size: 18px;
+    margin-left: 50%;
+    margin-right: 200px;
+  }
+
+  & h3 {
+    color: #fff;
+    font-size: 24px;
+    margin-left: 50%;
+    margin-bottom: 50px;
+    margin-right: 200px;
+  }
+
+  & a,
+  a:link,
+  a:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 14px;
+    align-items: right;
+    margin-left: 50%;
+
+    /* - to make it look like a button */
+    background-color: #cc52d4;
+    padding: 20px 46px 20px 46px;
+  }
+`;
+
+//__________JOB SECTION__________
+
+const JobSection = styled.section`
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  & h2 {
+    margin-bottom: 30px;
+  }
+`;
+
+const StyledWeWantYouIcon = styled(WeWantYouIcon)`
+  fill: purple;
+  width: 60px;
+  height: auto;
+  text-align: center;
+`;
+
 export default Header;
 
 function Header() {
@@ -236,10 +314,10 @@ function Header() {
         <Services />
         <Team />
 
-        <div className="airbnb-section">
+        <section className="airbnb-section">
           <StyledBanner src={airbnbBanner} alt="Handy mit Airbnb App" />
-          <img src={airbnbLogo} alt="Airbnb Logo" />
-          <MaxWidth className="max-width-airbnb">
+          <AirbnbPurpleTextBox>
+            <img src={airbnbLogo} alt="Airbnb Logo" />
             <p>
               Wir haben jahrelange Erfahrung im airbnb-Service Bereich. Wir
               bieten ein Rundumservice an, welches beinhaltet
@@ -251,35 +329,46 @@ function Header() {
             <a href="mailto:sauber@adriana-reinigungsservice.at">
               E-Mail Anfrage
             </a>
+          </AirbnbPurpleTextBox>
+        </section>
+
+        <BackgroundLightPurple>
+          <MaxWidth>
+            <JobSection className="jobs" id="jobs">
+              <h2>Interessiert an einem Job oder einer Lehre?</h2>
+              <div style={{ textAlign: "center" }}>
+                <StyledWeWantYouIcon
+                  type="img"
+                  alt="Zeigefinger zeigt auf dich"
+                />
+              </div>
+
+              <h3>Unter Reinigungs-Team braucht Verstärkung!</h3>
+              <p>
+                Haben Sie sich schon Gedanken gemacht, wie Sie die nächsten
+                Bausteine Ihrer Karriere legen wollen? In welchem Arbeitsumfeld
+                Sie wachsen wollen und wo Ihre Fähigkeiten am besten gefördert
+                werden? Wir freuen uns auf Ihre Bewerbung...
+              </p>
+              <h3>Bewirb dich für eine Lehre bei uns!</h3>
+              <p>
+                Haben Sie sich schon Gedanken gemacht, wie Sie die nächsten
+                Bausteine Ihrer Karriere legen wollen? In welchem Arbeitsumfeld
+                Sie wachsen wollen und wo Ihre Fähigkeiten am besten gefördert
+                werden?
+              </p>
+              <h3>Wir brauchen Hilfe in der Wäscherei!</h3>
+              <p>
+                In welchem Arbeitsumfeld Sie wachsen wollen und wo Ihre
+                Fähigkeiten am besten gefördert werden? Unsere Mission
+                Statements stellen Bausteine unseres Erfolgs dar. Seien Sie ein
+                weiterer Baustein. Wir freuen uns auf Ihre Bewerbung als PERFECT
+                FIT.
+              </p>
+            </JobSection>
           </MaxWidth>
-        </div>
-        <MaxWidth>
-          <div className="jobs" id="jobs">
-            <WeWantYouIcon type="img" alt="Zeigefinger zeigt auf dich" />
-            <h2>Interessiert an einem Job oder einer Lehre?</h2>
-            <h3>Unter Reinigungs-Team braucht Verstärkung!</h3>
-            <p>
-              Haben Sie sich schon Gedanken gemacht, wie Sie die nächsten
-              Bausteine Ihrer Karriere legen wollen? In welchem Arbeitsumfeld
-              Sie wachsen wollen und wo Ihre Fähigkeiten am besten gefördert
-              werden? Wir freuen uns auf Ihre Bewerbung...
-            </p>
-            <h3>Bewirb dich für eine Lehre bei uns!</h3>
-            <p>
-              Haben Sie sich schon Gedanken gemacht, wie Sie die nächsten
-              Bausteine Ihrer Karriere legen wollen? In welchem Arbeitsumfeld
-              Sie wachsen wollen und wo Ihre Fähigkeiten am besten gefördert
-              werden?
-            </p>
-            <h3>Wir brauchen Hilfe in der Wäscherei!</h3>
-            <p>
-              In welchem Arbeitsumfeld Sie wachsen wollen und wo Ihre
-              Fähigkeiten am besten gefördert werden? Unsere Mission Statements
-              stellen Bausteine unseres Erfolgs dar. Seien Sie ein weiterer
-              Baustein. Wir freuen uns auf Ihre Bewerbung als PERFECT FIT.
-            </p>
-          </div>
-        </MaxWidth>
+        </BackgroundLightPurple>
+
         <div className="adrianas-wäscherei">
           <StyledBanner src={laundryBanner} alt="Saubere Wäsche" />
           <MaxWidth>

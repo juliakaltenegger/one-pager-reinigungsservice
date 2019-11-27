@@ -19,14 +19,13 @@ import marianne3 from "./assets/marianne3.png";
 export default Team;
 
 const TeamSection = styled.section`
-  padding: 60px 0px 20px 0px;
+  padding: 80px 0px 20px 0px;
 `;
 
 const TeamTopGridContainer = styled.div`
   display: grid;
   grid-template-columns: auto auto auto;
-  padding: 10px;
-  margin: 50px 50px 5px 50px;
+  padding: 50px 50px 5px 50px;
 `;
 const TeamTopGridItem = styled.div`
   font-size: 30px;
@@ -44,7 +43,7 @@ const TeamTopGridItem = styled.div`
 const TeamBottomGridContainer = styled.div`
   display: grid;
   grid-template-columns: auto auto auto;
-  margin: 50px 0px 0px 110px;
+  padding: 50px 0px 0px 110px;
 `;
 
 const TeamBottomGridItem = styled.div`
@@ -63,7 +62,7 @@ const TeamBottomGridItem = styled.div`
   }
 
   & h3 {
-    margin: 25px 0px 25px 0px;
+    padding: 25px 0px 25px 0px;
     text-transform: none;
   }
 `;
@@ -72,8 +71,8 @@ function Team() {
   return (
     <>
       <MaxWidth className="maxwidth-team">
-        <TeamSection>
-          <div className="team" id="team">
+        <TeamSection id="team">
+          <div>
             <h2>Unser Team</h2>
             <TeamTopGridContainer>
               <TeamTopGridItem>

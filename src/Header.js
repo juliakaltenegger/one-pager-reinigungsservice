@@ -299,7 +299,7 @@ const LaundryBlueTextBox = styled.div`
     line-height: 30px;
     margin-left: 50%;
     margin-right: 40px;
-    margin-top: 10px;
+    padding-top: 10px;
   }
 
   & h3 {
@@ -335,11 +335,11 @@ function Header() {
   return (
     <div className="App">
       <header className="header">
-        <NavBar id="navBar">
+        <NavBar>
           <MaxWidthNav>
             <NavBarFlexbox>
               <div className="nav-contain-logo">
-                <a href="#navBar">
+                <a href="#start">
                   <Logo
                     className="nav-logo"
                     src={logo}
@@ -371,7 +371,6 @@ function Header() {
                     <a href="#clients">Kunden</a>
                   </li>
                   <li>
-                    {" "}
                     <a href="#contact">Kontakt</a>
                   </li>
                 </ul>
@@ -379,7 +378,7 @@ function Header() {
             </NavBarFlexbox>
           </MaxWidthNav>
         </NavBar>
-        <BannerHeader className="banner-header">
+        <BannerHeader id="start" className="banner-header">
           <StyledBanner
             src={banner}
             className="banner-image"
@@ -482,7 +481,7 @@ function Header() {
                 <a href="mailto:waescherei@adriana-reinigungsservice.at">
                   E-Mail Anfrage
                 </a>
-              </MaxWidth>{" "}
+              </MaxWidth>
             </LaundryBlueTextBox>
           </LaundryContainer>
         </div>

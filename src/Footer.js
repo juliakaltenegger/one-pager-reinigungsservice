@@ -11,14 +11,15 @@ export default Footer;
 
 const StyledLogoFooter = styled.img`
   width: 300px;
-  position: absolute;
-  top: 40px;
+  /* position: absolute;
+  top: 40px; */
+  padding-bottom: 20px;
 `;
 
 const FooterSectionPurple = styled.div`
   background: purple;
   position: relative;
-  padding-top: 170px;
+  padding-top: 60px;
   padding-bottom: 60px;
 
   & h2 {
@@ -37,6 +38,45 @@ const FooterSectionPurple = styled.div`
     text-decoration: none;
     text-decoration: underline;
   }
+`;
+
+const FooterGridPurple = styled.div`
+  display: grid;
+  grid-template-columns: auto auto;
+`;
+
+const FooterGridItem = styled.div`
+  padding-right: 125px;
+`;
+
+const FooterForm = styled.div`
+  display: grid;
+  grid-template-rows: auto auto auto;
+
+  & label {
+    color: #fff;
+    background-color: tomato;
+    font-family: "Roboto", sans-serif;
+  }
+
+  & input {
+    font-family: "Roboto", sans-serif;
+    padding-right: 40px;
+    margin-right: 20px;
+  }
+`;
+
+const FooterButton = styled.button`
+  text-transform: uppercase;
+  background-color: #cc52d4;
+  padding: 20px 46px 20px 46px;
+  color: #fff;
+  font-weight: 900;
+  font-family: "Raleway", sans-serif;
+  font-size: 12px;
+  border: none;
+
+  margin-top: 180px;
 `;
 
 const FooterSectionWhite = styled.div`
@@ -69,29 +109,53 @@ function Footer() {
     <footer id="contact">
       <FooterSectionPurple>
         <MaxWidth>
-          <div className="footer-purple">
-            <StyledLogoFooter
-              src={logoFooter}
-              alt="Logo Adriana macht sauber"
-            />
-            <h2>Adriana Reinigungsservice E.U.</h2>
-            <p>
-              Karl Löwe Gasse 23/14, 1120 Wien <br></br> Tel.: +43 699 108 43
-              780
-              <br></br>
-              <a href="mailto:sauber@adriana-reinigungsservice.at">
-                sauber@adriana-reinigungsservice.at
-              </a>
-            </p>
-            <h2>Adriana Wäscherei</h2>
-            <p>
-              Fockygasse 2/1, 1120 Wien <br></br>Tel.: +43 699 123 45 89
-              <br></br>Öffnungszeiten: Mo-Fr 08:00-17:00<br></br>
-              <a href="mailto:waescherei@adriana-reinigungsservice.at">
-                waescherei@adriana-reinigungsservice.at
-              </a>
-            </p>
-          </div>
+          <FooterGridPurple>
+            <FooterGridItem>
+              <StyledLogoFooter
+                src={logoFooter}
+                alt="Logo Adriana macht sauber"
+              />
+              <h2>Adriana Reinigungsservice E.U.</h2>
+              <p>
+                Karl Löwe Gasse 23/14, 1120 Wien <br></br> Tel.: +43 699 108 43
+                780
+                <br></br>
+                <a href="mailto:sauber@adriana-reinigungsservice.at">
+                  sauber@adriana-reinigungsservice.at
+                </a>
+              </p>
+              <h2>Adriana Wäscherei</h2>
+              <p>
+                Fockygasse 2/1, 1120 Wien <br></br>Tel.: +43 699 123 45 89
+                <br></br>Öffnungszeiten: Mo-Fr 08:00-17:00<br></br>
+                <a href="mailto:waescherei@adriana-reinigungsservice.at">
+                  waescherei@adriana-reinigungsservice.at
+                </a>
+              </p>
+            </FooterGridItem>
+            <FooterGridItem>
+              <FooterForm>
+                <label>
+                  Name:
+                  <input type="text" name="name" />
+                </label>
+                <label>
+                  E-Mailadresse:
+                  <input type="email" name="emailaddress" />
+                </label>
+                <label>
+                  Betreff:
+                  <input type="text" name="subject" />
+                </label>
+                <br></br>
+                <label>
+                  Nachricht:
+                  <input type="text" name="message" />
+                </label>
+              </FooterForm>
+              <FooterButton>Nachricht senden</FooterButton>
+            </FooterGridItem>
+          </FooterGridPurple>
         </MaxWidth>
       </FooterSectionPurple>
       <FooterSectionWhite>

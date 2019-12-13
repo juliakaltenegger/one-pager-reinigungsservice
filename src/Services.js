@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import MaxWidth from "./MaxWidth.js";
-import StyledIcons from "./StyledIcons";
 import BackgroundLightPurple from "./BackgroundLightPurple.js";
 
 //icons services

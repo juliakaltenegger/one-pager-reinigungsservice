@@ -9,9 +9,20 @@ import { hydrate, render } from "react-dom";
 
 const rootElement = document.getElementById("root");
 if (rootElement.hasChildNodes()) {
-  hydrate(<App />, <GlobalStyle />, rootElement);
+  hydrate(
+    <>
+      <App />
+      <GlobalStyle />
+    </>,
+    rootElement,
+  );
 } else {
-  render(<App />, <GlobalStyle />, rootElement);
+  render(
+    <>
+      <App />
+    </>,
+    rootElement,
+  );
 }
 
 const GlobalStyle = createGlobalStyle`

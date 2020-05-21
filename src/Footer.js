@@ -142,7 +142,12 @@ function Footer() {
               </p>
             </FooterGridItem>
             <FooterGridItem>
-              <FooterForm name="contact" method="post" netlify>
+              <FooterForm
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                type="file"
+              >
                 <input type="hidden" name="form-name" value="contact" />
                 <p>
                   <label>

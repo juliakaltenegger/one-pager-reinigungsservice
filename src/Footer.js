@@ -142,14 +142,31 @@ function Footer() {
               </p>
             </FooterGridItem>
             <FooterGridItem>
-              <FooterForm>
-                <label>Name</label>
-                <input type="text" name="name" />
-                <label>E-Mailadresse</label>
-                <input type="email" name="emailaddress" />
-                <label>Betreff</label>
-                <input type="text" name="subject" />
-                <label>Nachricht</label>
+              <FooterForm name="contact" method="post">
+                <input type="hidden" name="form-name" value="contact" />
+                <p>
+                  <label>
+                    Name
+                    <input type="text" name="name" />
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    E-Mailadresse
+                    <input type="email" name="email" />
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    Betreff
+                    <input type="text" name="subject" />
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    Nachricht<textarea name="message"></textarea>
+                  </label>
+                </p>
                 <InputMessage type="text" name="message" />
               </FooterForm>
               <FooterButton>Nachricht senden</FooterButton>

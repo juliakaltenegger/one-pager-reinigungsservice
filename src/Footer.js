@@ -106,11 +106,11 @@ const FooterSectionWhite = styled.div`
   }
 `;
 
-const InputMessage = styled.input`
-  min-height: 20em;
-  min-width: 60em !important;
-  padding-left: 0px;
-`;
+// const InputMessage = styled.label`
+//   min-height: 20em;
+//   min-width: 60em !important;
+//   padding-left: 0px;
+// `;
 
 function Footer() {
   return (
@@ -167,9 +167,8 @@ function Footer() {
                     Nachricht<textarea name="message"></textarea>
                   </label>
                 </p>
-                <InputMessage type="text" name="message" />
               </FooterForm>
-              <FooterButton>Nachricht senden</FooterButton>
+              <FooterButton type="submit">Nachricht senden</FooterButton>
             </FooterGridItem>
           </FooterGridPurple>
         </MaxWidth>

@@ -49,7 +49,7 @@ const FooterGridItem = styled.div`
   padding-right: 125px;
 `;
 
-const FooterForm = styled.div`
+const FooterForm = styled.form`
   display: grid;
   grid-template-rows: auto auto auto;
 
@@ -173,8 +173,9 @@ function Footer() {
                     Message: <textarea name="message"></textarea>
                   </label>
                 </p>
-
-                <FooterButton type="submit">Nachricht senden</FooterButton>
+                <p>
+                  <FooterButton type="submit">Nachricht senden</FooterButton>
+                </p>{" "}
               </FooterForm>
             </FooterGridItem>
           </FooterGridPurple>

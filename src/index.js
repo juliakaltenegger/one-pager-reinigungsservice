@@ -63,10 +63,9 @@ li {
   font-size: 12px;
 }
 `;
-
 const rootElement = document.getElementById("root");
 if (rootElement.hasChildNodes()) {
-  hydrate(
+  ReactDOM.hydrate(
     <>
       <App />
       <GlobalStyle />
@@ -74,7 +73,7 @@ if (rootElement.hasChildNodes()) {
     rootElement,
   );
 } else {
-  render(
+  ReactDOM.render(
     <>
       <App />
       <GlobalStyle />
@@ -82,7 +81,6 @@ if (rootElement.hasChildNodes()) {
     rootElement,
   );
 }
-
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA

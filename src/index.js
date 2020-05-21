@@ -7,6 +7,25 @@ import { createGlobalStyle } from "styled-components";
 
 import { hydrate, render } from "react-dom";
 
+const rootElement = document.getElementById("root");
+if (rootElement.hasChildNodes()) {
+  hydrate(
+    <>
+      <App />
+      {/* <GlobalStyle /> */}
+    </>,
+    rootElement,
+  );
+} else {
+  render(
+    <>
+      <App />
+      {/* <GlobalStyle /> */}
+    </>,
+    rootElement,
+  );
+}
+
 const GlobalStyle = createGlobalStyle`
 * {
   box-sizing: border-box;
@@ -63,24 +82,7 @@ li {
   font-size: 12px;
 }
 `;
-const rootElement = document.getElementById("root");
-if (rootElement.hasChildNodes()) {
-  ReactDOM.hydrate(
-    <>
-      <App />
-      <GlobalStyle />
-    </>,
-    rootElement,
-  );
-} else {
-  ReactDOM.render(
-    <>
-      <App />
-      <GlobalStyle />
-    </>,
-    rootElement,
-  );
-}
+
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA

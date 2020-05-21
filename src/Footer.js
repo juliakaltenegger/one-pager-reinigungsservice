@@ -147,6 +147,7 @@ function Footer() {
                 method="POST"
                 data-netlify="true"
                 type="file"
+                netlify-honeypot="bot-field"
               >
                 <input type="hidden" name="form-name" value="contact" />
                 <p>
@@ -169,12 +170,7 @@ function Footer() {
                 </p>
                 <p>
                   <label>
-                    Nachricht
-                    <textarea
-                      name="message"
-                      placeholder="Ihre Nachricht"
-                      rows="7"
-                    ></textarea>
+                    Message: <textarea name="message"></textarea>
                   </label>
                 </p>
               </FooterForm>

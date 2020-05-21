@@ -9,9 +9,9 @@ import { hydrate, render } from "react-dom";
 
 const rootElement = document.getElementById("root");
 if (rootElement.hasChildNodes()) {
-  hydrate(<App />, rootElement);
+  hydrate(<App />, <GlobalStyle />, rootElement);
 } else {
-  render(<App />, rootElement);
+  render(<App />, <GlobalStyle />, rootElement);
 }
 
 const GlobalStyle = createGlobalStyle`
@@ -73,14 +73,6 @@ li {
 
 
 `;
-
-ReactDOM.render(
-  <>
-    <App />
-    <GlobalStyle />
-  </>,
-  document.getElementById("root"),
-);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

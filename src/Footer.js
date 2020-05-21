@@ -169,7 +169,12 @@ function Footer() {
                 </p>
                 <p>
                   <label>
-                    Nachricht<textarea name="message"></textarea>
+                    Nachricht
+                    <textarea
+                      name="message"
+                      placeholder="Ihre Nachricht"
+                      rows="7"
+                    ></textarea>
                   </label>
                 </p>
               </FooterForm>

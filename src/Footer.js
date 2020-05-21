@@ -146,7 +146,6 @@ function Footer() {
                 name="contact"
                 method="POST"
                 data-netlify="true"
-                type="file"
                 netlify-honeypot="bot-field"
               >
                 <input type="hidden" name="form-name" value="contact" />
@@ -175,7 +174,7 @@ function Footer() {
                 </p>
                 <p>
                   <FooterButton type="submit">Nachricht senden</FooterButton>
-                </p>{" "}
+                </p>
               </FooterForm>
             </FooterGridItem>
           </FooterGridPurple>

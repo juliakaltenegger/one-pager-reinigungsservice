@@ -55,14 +55,18 @@ const FooterForm = styled.div`
 
   & label {
     color: #fff;
-    background-color: tomato;
     font-family: "Roboto", sans-serif;
+    line-height: 20px;
+    padding-top: 20px;
+    padding-bottom: 2px;
   }
 
   & input {
     font-family: "Roboto", sans-serif;
-    padding-right: 40px;
-    margin-right: 20px;
+    padding-right: 10px;
+    height: 25px;
+    width: 200px;
+    min-width: 30em;
   }
 `;
 
@@ -75,8 +79,7 @@ const FooterButton = styled.button`
   font-family: "Raleway", sans-serif;
   font-size: 12px;
   border: none;
-
-  margin-top: 180px;
+  margin-top: 20px;
 `;
 
 const FooterSectionWhite = styled.div`
@@ -85,7 +88,6 @@ const FooterSectionWhite = styled.div`
   & p {
     color: purple;
     margin-top: 30px;
-
     line-height: 20px;
   }
 
@@ -102,6 +104,12 @@ const FooterSectionWhite = styled.div`
     right: 200px;
     top: 0;
   }
+`;
+
+const InputMessage = styled.input`
+  min-height: 20em;
+  min-width: 60em !important;
+  padding-left: 0px;
 `;
 
 function Footer() {
@@ -135,23 +143,14 @@ function Footer() {
             </FooterGridItem>
             <FooterGridItem>
               <FooterForm>
-                <label>
-                  Name:
-                  <input type="text" name="name" />
-                </label>
-                <label>
-                  E-Mailadresse:
-                  <input type="email" name="emailaddress" />
-                </label>
-                <label>
-                  Betreff:
-                  <input type="text" name="subject" />
-                </label>
-                <br></br>
-                <label>
-                  Nachricht:
-                  <input type="text" name="message" />
-                </label>
+                <label>Name</label>
+                <input type="text" name="name" />
+                <label>E-Mailadresse</label>
+                <input type="email" name="emailaddress" />
+                <label>Betreff</label>
+                <input type="text" name="subject" />
+                <label>Nachricht</label>
+                <InputMessage type="text" name="message" />
               </FooterForm>
               <FooterButton>Nachricht senden</FooterButton>
             </FooterGridItem>
@@ -166,7 +165,7 @@ function Footer() {
               Reinigungsservice/Wäscherei/airbnb Service <br></br> 0699 108 43
               780 {""}
               <a href="mailto:sauber@adriana-reinigungsservice.at">
-                sauber@adriana-reinigungsservice.at
+                {""} sauber@adriana-reinigungsservice.at {""}
               </a>
               {""} Datenschutzerklärung
             </p>

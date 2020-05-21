@@ -18,11 +18,11 @@ import meisterbetriebWhite from "./assets/meisterbetrieb_white.png";
 
 //assets airbnb section
 import airbnbLogo from "./assets/airbnb-logo.png";
-import airbnbBanner from "./assets/airbnb-banner.png";
+import airbnbBanner from "./assets/airbnb-banner.jpeg";
 // airbnbBanner = placeholder stockphoto istockphoto-517702502-2048x2048.jpg
 
 //assets laundry
-import laundryBanner from "./assets/laundry-banner.png";
+import laundryBanner from "./assets/laundry-banner.jpg";
 // laundryBanner = placeholder stockphoto istockphoto-665819900-2048x2048 Kopie.jpg
 
 //icon jobs
@@ -83,6 +83,10 @@ const NavContainerCenter = styled.div`
     font-weight: 400;
     text-align: left;
   }
+
+  & a {
+    text-decoration: none;
+  }
 `;
 
 const NavContainerLinks = styled.div`
@@ -127,12 +131,31 @@ const StyledCallCenterIcon = styled(CallCenterIcon)`
   height: auto;
   display: block;
   margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 //__________SPONGE BANNER__________
 
 const BannerHeader = styled.section`
   position: relative;
+  background: url(${banner});
+  background-size: cover;
+  width: 100%;
+  min-height: 620px;
+
+  @media (max-width: 600px) {
+    background-position-x: -50vw;
+  }
+
+  /* & img {
+    width: 100%;
+    min-height: 620px;
+    z-index: -1;
+    display: none;
+  } */
 `;
 
 const MeisterWhite = styled.img`
@@ -170,10 +193,16 @@ const PurpleTextBox = styled.div`
 //__________AIRBNB BANNER__________
 const AirbnbContainer = styled.section`
   position: relative;
+  background: url(${airbnbBanner});
+  background-size: cover;
+  width: 100%;
+  min-height: 620px;
 `;
+
 const AirbnbPurpleTextBox = styled.div`
   width: 100%;
   height: 99%;
+
   background-image: linear-gradient(
     to right,
     rgba(155, 0, 174, 0),
@@ -269,6 +298,11 @@ const JobSectionGridItem = styled.div`
 const LaundryContainer = styled.section`
   position: relative;
   margin-bottom: 60px;
+  background: url(${laundryBanner});
+  background-size: cover;
+  width: 100%;
+  min-height: 620px;
+  margin-bottom: 60px;
 `;
 
 const LaundryBlueTextBox = styled.div`
@@ -350,7 +384,9 @@ function Header() {
               <NavContainerCenter className="nav-contain-h1-h2">
                 <h1 className="headline">Adriana</h1>
                 <h2 className="description">
-                  Reinigungsservice / Wäscherei / Airbnb Service
+                  <a href="#service">Reinigungsservice</a> /{" "}
+                  <a href="#laundry">Wäscherei</a> /{" "}
+                  <a href="#airbnb">Airbnb Service</a>
                 </h2>
               </NavContainerCenter>
 
@@ -378,12 +414,11 @@ function Header() {
             </NavBarFlexbox>
           </MaxWidthNav>
         </NavBar>
-        <BannerHeader id="start" className="banner-header">
-          <StyledBanner
-            src={banner}
-            className="banner-image"
-            alt="Oranger Schwamm auf blauer Oberfläche"
-          />
+        <BannerHeader
+          imgUrl={process.env.PUBLIC_URL + "/banner.jpg"}
+          id="start"
+          className="banner-header"
+        >
           <MeisterWhite src={meisterbetriebWhite} alt="Meisterbetrieb" />
           <MaxWidth className="banner-max-width">
             <PurpleTextBox>
@@ -399,8 +434,12 @@ function Header() {
         <Team />
 
         <section className="airbnb-section">
-          <AirbnbContainer>
-            <StyledBanner src={airbnbBanner} alt="Handy mit Airbnb App" />
+          <AirbnbContainer
+            imgUrl={process.env.PUBLIC_URL + "/airbnb-banner.jpeg"}
+            id="airbnb"
+            className="airbnb-banner"
+          >
+            <StyledBanner />
             <AirbnbPurpleTextBox>
               <img src={airbnbLogo} alt="Airbnb Logo" />
               <p>
@@ -465,8 +504,12 @@ function Header() {
         </BackgroundLightPurple>
 
         <div className="adrianas-wäscherei">
-          <LaundryContainer>
-            <StyledBanner src={laundryBanner} alt="Saubere Wäsche" />
+          <LaundryContainer
+            imgUrl={process.env.PUBLIC_URL + "/laundry-banner.jpg"}
+            id="laundry"
+            className="laundry-banner"
+          >
+            <StyledBanner />
             <LaundryBlueTextBox>
               <MaxWidth>
                 <h2>Adrianas Wäscherei</h2>

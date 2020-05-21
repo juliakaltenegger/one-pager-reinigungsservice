@@ -26,6 +26,10 @@ const TeamTopGridContainer = styled.div`
   display: grid;
   grid-template-columns: auto auto auto;
   padding: 50px 50px 5px 50px;
+
+  @media (max-width: 600px) {
+    grid-template-columns: auto;
+  }
 `;
 const TeamTopGridItem = styled.div`
   font-size: 30px;
@@ -44,6 +48,11 @@ const TeamBottomGridContainer = styled.div`
   display: grid;
   grid-template-columns: auto auto auto;
   padding: 50px 0px 0px 110px;
+
+  @media (max-width: 600px) {
+    grid-template-columns: auto auto;
+    padding: 50px 0px 0px 10px;
+  }
 `;
 
 const TeamBottomGridItem = styled.div`
@@ -65,6 +74,22 @@ const TeamBottomGridItem = styled.div`
     padding: 25px 0px 25px 0px;
     text-transform: none;
   }
+
+  @media (max-width: 600px) {
+    grid-template-columns: auto;
+    padding: 0px;
+
+    & h3 {
+      font-size: 0.3em;
+      padding-bottom: 10px;
+    }
+
+    & img {
+      width: 80px;
+      height: auto;
+      padding-right: 10px;
+    }
+  }
 `;
 
 function Team() {
@@ -75,18 +100,8 @@ function Team() {
           <div>
             <h2>Unser Team</h2>
             <TeamTopGridContainer>
-              <TeamTopGridItem>
-                <img src={adrianaPhoto} alt="Geschäftsführerin Adriana" />
-              </TeamTopGridItem>
-
-              <TeamTopGridItem>
-                <img src={dogPhoto} alt="Hund" />
-              </TeamTopGridItem>
-
-              <TeamTopGridItem>
-                <img src={adrianaPhoto2} alt="Teammitglied" />
-              </TeamTopGridItem>
               <TeamTopGridItem className="intro-adriana">
+                <img src={adrianaPhoto} alt="Geschäftsführerin Adriana" />
                 <h3>Adriana</h3>
                 <p>
                   In Rumänien geboren, lebt Sie seit vielen Jahren in Wien. Sie
@@ -94,7 +109,9 @@ function Team() {
                   Gebäudereinigung absolviert. Adriana hat alles im Griff!
                 </p>
               </TeamTopGridItem>
+
               <TeamTopGridItem className="intro-dog">
+                <img src={dogPhoto} alt="Hund" />
                 <h3>Kaya</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
@@ -102,7 +119,9 @@ function Team() {
                   natoque...
                 </p>
               </TeamTopGridItem>
+
               <TeamTopGridItem className="intro-team1">
+                <img src={adrianaPhoto2} alt="Teammitglied" />
                 <h3>Max Mustermann</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.

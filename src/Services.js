@@ -21,7 +21,12 @@ const ServicesGridContainer = styled.div`
   grid-template-columns: auto auto auto;
   padding: 10px;
   margin: 50px 50px 0px 50px;
+
+  @media (max-width: 600px) {
+    grid-template-columns: auto;
+  }
 `;
+
 const ServicesGridItem = styled.div`
   font-size: 30px;
   text-align: center;

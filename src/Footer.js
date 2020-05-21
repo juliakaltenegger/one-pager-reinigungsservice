@@ -173,8 +173,9 @@ function Footer() {
                     Message: <textarea name="message"></textarea>
                   </label>
                 </p>
+
+                <FooterButton type="submit">Nachricht senden</FooterButton>
               </FooterForm>
-              <FooterButton type="submit">Nachricht senden</FooterButton>
             </FooterGridItem>
           </FooterGridPurple>
         </MaxWidth>

@@ -147,6 +147,7 @@ function Footer() {
                 method="POST"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
+                action="/my_thank_you.html"
               >
                 <input type="hidden" name="form-name" value="contact" />
                 <p>

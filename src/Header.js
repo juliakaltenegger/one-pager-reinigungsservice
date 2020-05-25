@@ -86,6 +86,7 @@ const NavContainerCenter = styled.div`
 
   & a {
     text-decoration: none;
+    color: purple;
   }
 `;
 
@@ -118,7 +119,8 @@ const NavContainerLinks = styled.div`
     color: #000;
 
     /* - remove underlining of routing links # */
-    text-decoration: none;
+    text-decoration: none !important;
+    text-decoration-color: #000;
     text-transform: uppercase;
   }
 `;

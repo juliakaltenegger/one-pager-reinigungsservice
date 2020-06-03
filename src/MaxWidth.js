@@ -7,6 +7,11 @@ const MaxWidth = styled.div`
   margin-left: auto;
   margin-right: auto;
   max-width: 1080px;
+
+  @media (max-width: 768px) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 `;
 
 export default MaxWidth;

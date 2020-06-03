@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 // importing different sections
+import Navbar from "./Nav/Navbar";
 import Services from "./Services.js";
 import Team from "./Team.js";
 import Clients from "./Clients.js";
@@ -15,6 +16,9 @@ import logo from "./assets/logo.png";
 import banner from "./assets/banner.jpg";
 import meisterbetriebWhite from "./assets/meisterbetrieb_white.png";
 // banner = placeholder stockphoto istockphoto-939057498-2048x2048.jpg
+
+//importing hamburger menu
+import { slide as Menu } from "react-burger-menu";
 
 //assets airbnb section
 import airbnbLogo from "./assets/airbnb-logo.png";
@@ -40,7 +44,7 @@ const MaxWidthNav = styled.div`
   margin-right: auto;
   max-width: 1180px;
 `;
-const NavBar = styled.div`
+const NavBarSection = styled.div`
   background-color: #fff;
   height: 130px;
   width: 100%;
@@ -90,41 +94,6 @@ const NavContainerCenter = styled.div`
   }
 `;
 
-const NavContainerLinks = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  width: 350px;
-  /* - items are packed toward to end line (to the very right) */
-  justify-content: flex-end;
-
-  & ul {
-    /* - remove bullet points */
-    list-style: none;
-    margin: -10px;
-    padding: 0;
-  }
-
-  & li {
-    /* - from vertical to horizontal */
-    display: inline;
-    /* - space between list elements */
-    padding: 5px;
-  }
-
-  /* links in nav bar (service team jobs/karriere kunden kontakt) */
-  & a {
-    font-family: sans-serif;
-    font-size: 12px;
-    font-weight: lighter;
-    color: #000;
-
-    /* - remove underlining of routing links # */
-    text-decoration: none !important;
-    text-decoration-color: #000;
-    text-transform: uppercase;
-  }
-`;
-
 const StyledCallCenterIcon = styled(CallCenterIcon)`
   /* NEEDS TO BE UPDATED (HEX!!!) */
   fill: lightblue;
@@ -138,7 +107,6 @@ const StyledCallCenterIcon = styled(CallCenterIcon)`
     display: none;
   }
 `;
-
 //__________SPONGE BANNER__________
 
 const BannerHeader = styled.section`
@@ -172,7 +140,7 @@ const MeisterWhite = styled.img`
 const PurpleTextBox = styled.div`
   background-color: purple;
   opacity: 0.7;
-  width: 490px;
+  min-width: 490px;
 
   font-family: sans-serif;
   color: #fff;
@@ -189,6 +157,14 @@ const PurpleTextBox = styled.div`
 
   & a {
     color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    position: relative;
+    left: 0px;
+    top: 390px;
+    min-width: 200px;
+    max-width: 600px;
   }
 `;
 
@@ -371,7 +347,7 @@ function Header() {
   return (
     <div className="App">
       <header className="header">
-        <NavBar>
+        <NavBarSection>
           <MaxWidthNav>
             <NavBarFlexbox>
               <div className="nav-contain-logo">
@@ -386,36 +362,24 @@ function Header() {
               <NavContainerCenter className="nav-contain-h1-h2">
                 <h1 className="headline">Adriana</h1>
                 <h2 className="description">
-                  <a href="#service">Reinigungsservice</a> /{" "}
-                  <a href="#laundry">Wäscherei</a> /{" "}
-                  <a href="#airbnb">Airbnb Service</a>
+                  <a className="menu-item" href="#service">
+                    Reinigungsservice
+                  </a>{" "}
+                  /{" "}
+                  <a className="menu-item" href="#laundry">
+                    Wäscherei
+                  </a>{" "}
+                  /{" "}
+                  <a className="menu-item" href="#airbnb">
+                    Airbnb Service
+                  </a>
                 </h2>
               </NavContainerCenter>
-
-              <NavContainerLinks className="nav-contain-callcenter-ul">
-                <StyledCallCenterIcon type="img" alt="Call Center Agent" />
-
-                <ul className="nav-bar-links">
-                  <li>
-                    <a href="#service">Service</a>
-                  </li>
-                  <li>
-                    <a href="#team">Team</a>
-                  </li>
-                  <li>
-                    <a href="#jobs">Jobs/Karriere</a>
-                  </li>
-                  <li>
-                    <a href="#clients">Kunden</a>
-                  </li>
-                  <li>
-                    <a href="#contact">Kontakt</a>
-                  </li>
-                </ul>
-              </NavContainerLinks>
+              <Navbar />
+              <StyledCallCenterIcon type="img" alt="Call Center Agent" />
             </NavBarFlexbox>
           </MaxWidthNav>
-        </NavBar>
+        </NavBarSection>
         <BannerHeader
           imgUrl={process.env.PUBLIC_URL + "/banner.jpg"}
           id="start"

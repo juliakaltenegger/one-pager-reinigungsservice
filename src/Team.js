@@ -34,13 +34,19 @@ const TeamTopGridContainer = styled.div`
 const TeamTopGridItem = styled.div`
   font-size: 30px;
   text-align: center;
-  padding: 0px 20px 0px 20px;
+  /* padding: 0px 20px 0px 20px; */
   line-height: 20px;
 
   & img {
     width: 250px;
     height: auto;
     padding-bottom: 20px;
+  }
+
+  & p {
+    padding-bottom: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 `;
 
@@ -50,8 +56,8 @@ const TeamBottomGridContainer = styled.div`
   padding: 50px 0px 0px 110px;
 
   @media (max-width: 600px) {
-    grid-template-columns: auto auto;
-    padding: 50px 0px 0px 10px;
+    grid-template-columns: auto {auto};
+    padding: 50px 0px 0px 35px;
   }
 `;
 

@@ -35,11 +35,13 @@ const ServicesGridItem = styled.div`
 
   & ul {
     list-style: none;
-    padding: 0px;
+    padding: 0px !important;
+    margin: 0px !important;
   }
 
   & li {
     padding: 0px;
+    color: #505050;
   }
 `;
 

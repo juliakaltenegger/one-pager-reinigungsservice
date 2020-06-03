@@ -70,6 +70,11 @@ const FooterForm = styled.form`
   }
 `;
 
+const FormInput = styled.input`
+  display: block;
+  width: 100%;
+`;
+
 const FooterButton = styled.button`
   text-transform: uppercase;
   background-color: #cc52d4;
@@ -148,28 +153,32 @@ function Footer() {
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
               >
-                <input type="hidden" name="form-name" value="contact" />
+                <FormInput type="hidden" name="form-name" value="contact" />
                 <p>
                   <label>
                     Name
-                    <input type="text" name="name" />
+                    <FormInput type="text" name="name" />
                   </label>
                 </p>
                 <p>
                   <label>
                     E-Mailadresse
-                    <input type="email" name="email" />
+                    <FormInput type="email" name="email" />
                   </label>
                 </p>
                 <p>
                   <label>
                     Betreff
-                    <input type="text" name="subject" />
+                    <FormInput type="text" name="subject" />
                   </label>
                 </p>
                 <p>
                   <label>
-                    Message: <textarea name="message"></textarea>
+                    Message
+                    <textarea
+                      name="message"
+                      placeholder="Ihre Nachricht"
+                    ></textarea>
                   </label>
                 </p>
                 <p>

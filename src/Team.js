@@ -87,7 +87,7 @@ const TeamBottomGridItem = styled.div`
 
     & h3 {
       font-size: 0.3em;
-      padding-bottom: 10px;
+      padding-top: 10px;
     }
 
     & img {

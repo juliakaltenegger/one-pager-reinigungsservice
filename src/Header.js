@@ -17,9 +17,6 @@ import banner from "./assets/banner.jpg";
 import meisterbetriebWhite from "./assets/meisterbetrieb_white.png";
 // banner = placeholder stockphoto istockphoto-939057498-2048x2048.jpg
 
-//importing hamburger menu
-import { slide as Menu } from "react-burger-menu";
-
 //assets airbnb section
 import airbnbLogo from "./assets/airbnb-logo.png";
 import airbnbBanner from "./assets/airbnb-banner.jpeg";

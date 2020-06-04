@@ -75,6 +75,12 @@ const FormInput = styled.input`
   width: 100%;
 `;
 
+const TextArea = styled.textarea`
+  display: block;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+`;
+
 const FooterButton = styled.button`
   text-transform: uppercase;
   background-color: #cc52d4;
@@ -175,10 +181,12 @@ function Footer() {
                 <p>
                   <label>
                     Message
-                    <textarea
+                    <TextArea
                       name="message"
                       placeholder="Ihre Nachricht"
-                    ></textarea>
+                      rows="10"
+                      wrap="hard"
+                    ></TextArea>
                   </label>
                 </p>
                 <p>

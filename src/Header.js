@@ -236,6 +236,42 @@ const AirbnbPurpleTextBox = styled.div`
     background-color: #cc52d4;
     padding: 20px 46px 20px 46px;
   }
+
+  @media (max-width: 768px) {
+    & p {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    & img {
+      margin-left: 0px;
+      width: 200px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    & h3 {
+      font-size: 20px;
+      margin-left: 0px;
+      margin-bottom: 0px;
+      margin-right: 0px;
+      padding-top: 20px;
+      padding-bottom: 60px;
+      text-align: center;
+    }
+
+    & a,
+    a:link,
+    a:visited {
+      font-size: 14px;
+      margin-left: 44px;
+      padding-top: 20px;
+
+      /* - to make it look like a button */
+      background-color: #cc52d4;
+      padding: 20px 46px 20px 46px;
+    }
+  }
 `;
 
 //__________JOB SECTION__________
@@ -260,6 +296,10 @@ const JobSectionGridContainer = styled.section`
   & h2 {
     margin-bottom: 30px;
   }
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 `;
 
 const JobSectionGridItem = styled.div`
@@ -267,6 +307,10 @@ const JobSectionGridItem = styled.div`
   text-align: center;
   padding: 0px 20px 0px 20px;
   line-height: 20px;
+
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
 `;
 
 //__________LAUNDRY SECTION__________
@@ -335,6 +379,37 @@ const LaundryBlueTextBox = styled.div`
     /* - to make it look like a button */
     background-color: #5aa6b0;
     padding: 20px 46px 20px 46px;
+  }
+
+  @media (max-width: 768px) {
+    & p {
+      margin: 20px;
+      padding: 0px;
+    font-size: 16x;
+    }
+
+    & h2 {
+    
+      margin: 40px;
+    padding-top: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+
+  & h3 {
+    
+    margin: 20px;
+    padding-bottom: 70px;
+    margin-right: 40px;
+    padding-top: 20px;
+    text-align: center;
+  }
+    & a,
+    a:link,
+    a:visited {
+      font-size: 14px;
+      margin-left: 75px;
+      padding-top: 20px;    
   }
 `;
 

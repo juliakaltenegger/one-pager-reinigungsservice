@@ -18,8 +18,12 @@ export default Clients;
 const ClientsGridContainer = styled.section`
   padding-bottom: 60px;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
   margin: 70px 50px 0px 50px;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 `;
 
 const ClientsGridItem = styled.div`
@@ -44,20 +48,28 @@ const ClientsGridItem = styled.div`
     text-transform: none;
   }
 
-  ${props =>
+  ${(props) =>
     props.clientAneli &&
     css`
       grid-row-start: 4;
       grid-row-end: 5;
       grid-column-start: 1;
     `}
-  ${props =>
+  ${(props) =>
     props.ordination &&
     css`
       grid-row-start: 5;
       grid-row-end: 5;
       grid-column-start: 2;
     `}
+
+    @media (max-width: 768px) {
+    display: block;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+
+
 `;
 
 function Clients() {

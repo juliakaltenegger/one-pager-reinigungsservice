@@ -43,6 +43,12 @@ const FooterSectionPurple = styled.div`
 const FooterGridPurple = styled.div`
   display: grid;
   grid-template-columns: auto auto;
+
+  @media (max-width: 768px) {
+    grid-template-columns: auto;
+    margin-left: 2em;
+    margin-right: 2em;
+  }
 `;
 
 const FooterGridItem = styled.div`
@@ -79,6 +85,9 @@ const TextArea = styled.textarea`
   display: block;
   width: 100%;
   font-family: "Roboto", sans-serif;
+
+  @media (max-width: 768px) {
+    margin-right: 2em;
 `;
 
 const FooterButton = styled.button`

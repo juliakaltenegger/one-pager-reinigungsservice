@@ -50,20 +50,6 @@ const Ul = styled.ul`
   }
 `;
 
-// const StyledCallCenterIcon = styled(CallCenterIcon)`
-//   /* NEEDS TO BE UPDATED (HEX!!!) */
-//   fill: lightblue;
-//   /* resizing */
-//   width: 200px;
-//   height: auto;
-//   display: block;
-//   margin-bottom: 20px;
-
-//   @media (max-width: 768px) {
-//     display: none;
-//   }
-// `;
-
 const RightNav = ({ open }) => {
   return /*#__PURE__*/ React.createElement(
     Ul,
@@ -129,38 +115,3 @@ const RightNav = ({ open }) => {
 };
 
 export default RightNav;
-
-//   const NavContainerLinks = styled.div`
-//   display: flex;
-//   flex-wrap: wrap;
-//   width: 350px;
-//   /* - items are packed toward to end line (to the very right) */
-//   justify-content: flex-end;
-
-//   & ul {
-//     /* - remove bullet points */
-//     list-style: none;
-//     margin: -10px;
-//     padding: 0;
-//   }
-
-//   & li {
-//     /* - from vertical to horizontal */
-//     display: inline;
-//     /* - space between list elements */
-//     padding: 5px;
-//   }
-
-//   /* links in nav bar (service team jobs/karriere kunden kontakt) */
-//   & a {
-//     font-family: sans-serif;
-//     font-size: 12px;
-//     font-weight: lighter;
-//     color: #000;
-
-//     /* - remove underlining of routing links # */
-//     text-decoration: none !important;
-//     text-decoration-color: #000;
-//     text-transform: uppercase;
-//   }
-// `;

@@ -40,6 +40,12 @@ const MaxWidthNav = styled.div`
   margin-left: auto;
   margin-right: auto;
   max-width: 1180px;
+
+  @media (max-width: 768px) {
+    max-width: 768px;
+    margin: 0px;
+    padding: 0px;
+  }
 `;
 const NavBarSection = styled.div`
   background-color: #fff;

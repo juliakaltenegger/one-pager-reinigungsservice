@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import RightNav from "./RightNav";
+
 const StyledBurger = styled.div`
   width: 2rem;
   height: 2rem;
@@ -9,6 +10,7 @@ const StyledBurger = styled.div`
   right: 20px;
   z-index: 20;
   display: none;
+
   @media (max-width: 768px) {
     display: flex;
     justify-content: space-around;
@@ -36,23 +38,16 @@ const StyledBurger = styled.div`
 
 const Burger = () => {
   const [open, setOpen] = useState(false);
-  return /*#__PURE__*/ React.createElement(
-    React.Fragment,
-    null,
-    /*#__PURE__*/ React.createElement(
-      StyledBurger,
-      {
-        open: open,
-        onClick: () => setOpen(!open),
-      },
-      /*#__PURE__*/ React.createElement("div", null),
-      /*#__PURE__*/ React.createElement("div", null),
-      /*#__PURE__*/ React.createElement("div", null),
-    ),
-    /*#__PURE__*/ React.createElement(RightNav, {
-      open: open,
-    }),
+
+  return (
+    <>
+      <StyledBurger open={open} onClick={() => setOpen(!open)}>
+        <div />
+        <div />
+        <div />
+      </StyledBurger>
+      <RightNav open={open} />
+    </>
   );
 };
-
 export default Burger;

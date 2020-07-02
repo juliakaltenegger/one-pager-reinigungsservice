@@ -11,36 +11,12 @@ const Nav = styled.nav`
   justify-content: space-between;
 `;
 
-// const Logo = styled.img`
-//   width: 150px;
-//   border: 2px white;
-//   /* - top / right / bottom / left */
-//   margin: 10px 0px 0px 0px;
-//   position: fixed;
-// `;
-
 const Navbar = () => {
-  return /*#__PURE__*/ React.createElement(
-    Nav,
-    null,
-    /*#__PURE__*/ React.createElement(
-      "div",
-      {
-        className: "nav-contain-logo",
-      },
-      // /*#__PURE__*/ React.createElement(
-      //   "a",
-      //   {
-      //     href: "#start",
-      //   },
-      //   /*#__PURE__*/ React.createElement(Logo, {
-      //     className: "nav-logo",
-      //     src: logo,
-      //     alt: "Logo Adriana macht sauber",
-      //   }),
-      // ),
-    ),
-    /*#__PURE__*/ React.createElement(Burger, null),
+  return (
+    <Nav>
+      <div className="logo">Nav Bar</div>
+      <Burger />
+    </Nav>
   );
 };
 

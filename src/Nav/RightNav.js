@@ -1,5 +1,4 @@
 import React from "react";
-// import { ReactComponent as CallCenterIcon } from "../assets/call-center.svg";
 
 import styled from "styled-components";
 
@@ -51,66 +50,24 @@ const Ul = styled.ul`
 `;
 
 const RightNav = ({ open }) => {
-  return /*#__PURE__*/ React.createElement(
-    Ul,
-    {
-      open: open,
-    },
-    /*#__PURE__*/ React.createElement(
-      "li",
-      null,
-      /*#__PURE__*/ React.createElement(
-        "a",
-        {
-          href: "#service",
-        },
-        "Service",
-      ),
-    ),
-    /*#__PURE__*/ React.createElement(
-      "li",
-      null,
-      /*#__PURE__*/ React.createElement(
-        "a",
-        {
-          href: "#team",
-        },
-        "Team",
-      ),
-    ),
-    /*#__PURE__*/ React.createElement(
-      "li",
-      null,
-      /*#__PURE__*/ React.createElement(
-        "a",
-        {
-          href: "#jobs",
-        },
-        "Jobs/Karriere",
-      ),
-    ),
-    /*#__PURE__*/ React.createElement(
-      "li",
-      null,
-      /*#__PURE__*/ React.createElement(
-        "a",
-        {
-          href: "#clients",
-        },
-        "Kunden",
-      ),
-    ),
-    /*#__PURE__*/ React.createElement(
-      "li",
-      null,
-      /*#__PURE__*/ React.createElement(
-        "a",
-        {
-          href: "#contact",
-        },
-        "Kontakt",
-      ),
-    ),
+  return (
+    <Ul open={open}>
+      <li>
+        <a href="#service">Service</a>
+      </li>
+      <li>
+        <a href="#team">Team</a>
+      </li>
+      <li>
+        <a href="#jobs">Jobs/Karriere</a>
+      </li>
+      <li>
+        <a href="#clients">Kunden</a>
+      </li>
+      <li>
+        <a href="#contact">Kontakt</a>
+      </li>
+    </Ul>
   );
 };
 

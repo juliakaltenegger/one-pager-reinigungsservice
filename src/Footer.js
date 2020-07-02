@@ -88,6 +88,7 @@ const TextArea = styled.textarea`
 
   @media (max-width: 768px) {
     margin-right: 2em;
+  }
 `;
 
 const FooterButton = styled.button`

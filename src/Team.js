@@ -31,6 +31,7 @@ const TeamTopGridContainer = styled.div`
     grid-template-columns: auto;
   }
 `;
+
 const TeamTopGridItem = styled.div`
   font-size: 30px;
   text-align: center;

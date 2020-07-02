@@ -68,8 +68,7 @@ const ClientsGridItem = styled.div`
     height: auto;
     padding: 10px;
     text-align: center;
-
-
+  }
 `;
 
 function Clients() {

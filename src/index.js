@@ -12,9 +12,10 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
 }
 body {
-  margin: 0px;
+margin: 0px;
 
 }
+
 H1 {
   font-family:  'Raleway', sans-serif;;
 ;

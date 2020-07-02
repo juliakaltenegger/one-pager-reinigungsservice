@@ -79,7 +79,7 @@ const Logo = styled.img`
 const NavContainerCenter = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width: 360px;
+  /* width: 360px; */
   padding: 0px;
   margin-top: 45px;
   margin-right: auto;
@@ -119,7 +119,7 @@ const BannerHeader = styled.section`
   width: 100%;
   min-height: 620px;
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     background-position-x: -50vw;
   }
 
@@ -195,7 +195,7 @@ const AirbnbPurpleTextBox = styled.div`
   font-size: 14px;
   line-height: 30px;
 
-  padding: 40px;
+  margin: 40px;
 
   z-index: 100;
   position: absolute;
@@ -391,31 +391,30 @@ const LaundryBlueTextBox = styled.div`
     & p {
       margin: 20px;
       padding: 0px;
-    font-size: 16x;
+      font-size: 16x;
     }
 
     & h2 {
-    
       margin: 40px;
-    padding-top: 10px;
-    margin-bottom: 0px;
-    text-align: center;
-  }
+      padding-top: 10px;
+      margin-bottom: 0px;
+      text-align: center;
+    }
 
-  & h3 {
-    
-    margin: 20px;
-    padding-bottom: 70px;
-    margin-right: 40px;
-    padding-top: 20px;
-    text-align: center;
-  }
+    & h3 {
+      margin: 20px;
+      padding-bottom: 70px;
+      margin-right: 40px;
+      padding-top: 20px;
+      text-align: center;
+    }
     & a,
     a:link,
     a:visited {
       font-size: 14px;
       margin-left: 75px;
-      padding-top: 20px;    
+      padding-top: 20px;
+    }
   }
 `;
 

@@ -122,13 +122,6 @@ const BannerHeader = styled.section`
   @media (max-width: 768px) {
     background-position-x: -50vw;
   }
-
-  /* & img {
-    width: 100%;
-    min-height: 620px;
-    z-index: -1;
-    display: none;
-  } */
 `;
 
 const MeisterWhite = styled.img`
@@ -138,6 +131,12 @@ const MeisterWhite = styled.img`
   left: 130px;
   width: 380px;
   opacity: 0.3;
+
+  @media (max-width: 768px) {
+    width: 250px;
+    top: 170px;
+    left: 30px;
+  }
 `;
 
 const PurpleTextBox = styled.div`

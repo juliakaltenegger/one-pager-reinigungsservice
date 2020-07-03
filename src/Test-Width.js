@@ -1,4 +1,5 @@
 import React from "react";
+import MaxWidth from "./MaxWidth.js";
 
 export default TestWidth;
 

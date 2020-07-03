@@ -10,10 +10,14 @@ import meisterbetrieb from "./assets/meisterbetrieb.png";
 export default Footer;
 
 const StyledLogoFooter = styled.img`
-  width: 300px;
+  max-width: 300px;
   /* position: absolute;
   top: 40px; */
   padding-bottom: 20px;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
 `;
 
 const FooterSectionPurple = styled.div`
@@ -53,6 +57,9 @@ const FooterGridPurple = styled.div`
 
 const FooterGridItem = styled.div`
   padding-right: 125px;
+  @media (max-width: 768px) {
+    padding-right: 0px;
+  }
 `;
 
 const FooterForm = styled.form`
@@ -71,8 +78,14 @@ const FooterForm = styled.form`
     font-family: "Roboto", sans-serif;
     padding-right: 10px;
     height: 25px;
-    width: 200px;
+    max-width: 200px;
     min-width: 30em;
+  }
+
+  @media (max-width: 768px) {
+    & input {
+      min-width: 100%;
+    }
   }
 `;
 
@@ -136,12 +149,6 @@ const FooterSectionWhite = styled.div`
     }
   }
 `;
-
-// const InputMessage = styled.label`
-//   min-height: 20em;
-//   min-width: 60em !important;
-//   padding-left: 0px;
-// `;
 
 function Footer() {
   return (

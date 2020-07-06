@@ -243,16 +243,17 @@ const AirbnbPurpleTextBox = styled.div`
   }
 
   @media (max-width: 768px) {
+    margin: 0px;
+
     & p {
       margin: 0px;
-      padding: 0px;
+      padding: 20px;
     }
 
     & img {
       margin-left: 0px;
       width: 200px;
-      padding-top: 20px;
-      padding-bottom: 20px;
+      padding: 20px;
     }
 
     & h3 {
@@ -260,18 +261,19 @@ const AirbnbPurpleTextBox = styled.div`
       margin-left: 0px;
       margin-bottom: 0px;
       margin-right: 0px;
-      padding-top: 20px;
-      padding-bottom: 60px;
+      padding: 20px 20px 60px 20px;
       text-align: center;
     }
 
     & a,
     a:link,
     a:visited {
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+      width: 60%;
       font-size: 14px;
-      margin-left: 44px;
-      padding-top: 20px;
-
+      margin: auto;
       /* - to make it look like a button */
       background-color: #cc52d4;
       padding: 20px 46px 20px 46px;
@@ -411,8 +413,12 @@ const LaundryBlueTextBox = styled.div`
     a:link,
     a:visited {
       font-size: 14px;
-      margin-left: 75px;
-      padding-top: 20px;
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+      width: 60%;
+      padding: 20px 46px 20px 46px;
+      line-height: 30px;
     }
   }
 `;

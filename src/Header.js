@@ -99,7 +99,7 @@ const NavContainerCenter = styled.div`
 
 const StyledCallCenterIcon = styled(CallCenterIcon)`
   /* NEEDS TO BE UPDATED (HEX!!!) */
-  fill: lightblue;
+  fill: #68b8d4;
   /* resizing */
   width: 200px;
   height: auto;
@@ -142,7 +142,7 @@ const MeisterWhite = styled.img`
 const PurpleTextBox = styled.div`
   background-color: purple;
   opacity: 0.7;
-  min-width: 490px;
+  max-width: 480px;
 
   font-family: sans-serif;
   color: #fff;

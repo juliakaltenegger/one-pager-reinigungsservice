@@ -6,9 +6,12 @@ const Ul = styled.ul`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
+  margin-left: auto !important;
+  margin-block-start: 0;
+  margin-right: 100px;
 
   li {
-    padding: 5px;
+    padding: 0px 5px 5px 5px;
     font-family: sans-serif;
     font-size: 12px;
     font-weight: lighter;
@@ -43,6 +46,9 @@ const Ul = styled.ul`
     width: 300px;
     padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
+    margin-block-start: initial !important;
+    margin-right: 0px;
+
     a {
       color: #fff !important;
     }

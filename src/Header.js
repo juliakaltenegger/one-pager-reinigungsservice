@@ -84,6 +84,7 @@ const NavContainerCenter = styled.div`
   margin-top: 45px;
   margin-right: auto;
   margin-left: 170px;
+  width: 100%;
 
   & h2 {
     font-size: 13px;
@@ -97,6 +98,31 @@ const NavContainerCenter = styled.div`
   }
 `;
 
+const NavContainerLeft = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  /* width: 360px; */
+  padding: 0px;
+
+  padding-left: 170px;
+  width: 50%;
+
+  & h2 {
+    font-size: 13px;
+    font-weight: 400;
+    text-align: left;
+  }
+
+  & a {
+    text-decoration: none;
+    color: purple;
+  }
+`;
+
+const NavContainerRight = styled.div`
+  width: 50%;
+`;
+
 const StyledCallCenterIcon = styled(CallCenterIcon)`
   /* NEEDS TO BE UPDATED (HEX!!!) */
   fill: #68b8d4;
@@ -105,6 +131,9 @@ const StyledCallCenterIcon = styled(CallCenterIcon)`
   height: auto;
   display: block;
   margin-bottom: 20px;
+  position: absolute;
+  top: 0;
+  right: 17vw;
 
   @media (max-width: 768px) {
     display: none;
@@ -181,7 +210,7 @@ const AirbnbContainer = styled.section`
 
 const AirbnbPurpleTextBox = styled.div`
   width: 100%;
-  height: 99%;
+  height: 100%;
 
   background-image: linear-gradient(
     to right,
@@ -193,8 +222,6 @@ const AirbnbPurpleTextBox = styled.div`
   font-weight: 400;
   font-size: 14px;
   line-height: 30px;
-
-  margin: 40px;
 
   z-index: 100;
   position: absolute;
@@ -333,7 +360,7 @@ const LaundryContainer = styled.section`
 
 const LaundryBlueTextBox = styled.div`
   width: 100%;
-  height: 99.5%;
+  height: 100%;
   background-image: linear-gradient(
     to right,
     rgba(109, 198, 210, 0),
@@ -443,6 +470,8 @@ function Header() {
               </div>
               <NavContainerCenter className="nav-contain-h1-h2">
                 <h1 className="headline">Adriana</h1>
+              </NavContainerCenter>
+              <NavContainerLeft>
                 <h2 className="description">
                   <a className="menu-item" href="#service">
                     Reinigungsservice
@@ -456,9 +485,11 @@ function Header() {
                     Airbnb Service
                   </a>
                 </h2>
-              </NavContainerCenter>
-              <Navbar />
-              <StyledCallCenterIcon type="img" alt="Call Center Agent" />
+              </NavContainerLeft>
+              <NavContainerRight>
+                <Navbar />
+                <StyledCallCenterIcon type="img" alt="Call Center Agent" />
+              </NavContainerRight>
             </NavBarFlexbox>
           </MaxWidthNav>
         </NavBarSection>

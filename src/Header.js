@@ -11,7 +11,7 @@ import MaxWidth from "./MaxWidth.js";
 import BackgroundLightPurple from "./BackgroundLightPurple.js";
 
 //importing assets for nav bar
-import { ReactComponent as CallCenterIcon } from "./assets/call-center.svg";
+import callCenterIcon from "./assets/call-center.png";
 import logo from "./assets/logo.png";
 import banner from "./assets/banner.jpg";
 import meisterbetriebWhite from "./assets/meisterbetrieb_white.png";
@@ -123,7 +123,7 @@ const NavContainerRight = styled.div`
   width: 50%;
 `;
 
-const StyledCallCenterIcon = styled(CallCenterIcon)`
+const StyledCallCenterIcon = styled.img`
   /* NEEDS TO BE UPDATED (HEX!!!) */
   fill: #68b8d4;
   /* resizing */
@@ -184,7 +184,7 @@ const PurpleTextBox = styled.div`
   z-index: 100;
   position: absolute;
   top: 420px;
-  left: 210px;
+  left: 280px;
 
   & a {
     color: #fff;
@@ -488,7 +488,10 @@ function Header() {
               </NavContainerLeft>
               <NavContainerRight>
                 <Navbar />
-                <StyledCallCenterIcon type="img" alt="Call Center Agent" />
+                <StyledCallCenterIcon
+                  src={callCenterIcon}
+                  alt="Call Center Agent"
+                />
               </NavContainerRight>
             </NavBarFlexbox>
           </MaxWidthNav>
